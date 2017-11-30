@@ -8,7 +8,8 @@ manage in-house publication records as well as other data about research
 activities (such as lectures, committee actitivities, keynotes and
 presentations, media relations and supervision) and to produce reports in
 various ways. Please contact [Lydia  Koglin](mailto:koglin@igb-berlin.de) if you
-like to know more about the implementation at IGB.
+like to know more about the implementation at IGB. The application was
+implemented by [Wendig OÜ](https://wendig.io).
 
 ## Development setup
 
