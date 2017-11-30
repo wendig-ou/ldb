@@ -1,0 +1,32 @@
+# Codeception Test Suite Configuration
+#
+# Suite for acceptance tests.
+# Perform tests in browser using the WebDriver or PhpBrowser.
+# If you need both WebDriver and PHPBrowser tests - create a separate suite.
+
+actor: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver:
+            url: 'http://localhost:3999'
+            window_size: false # disabled in ChromeDriver
+            # window_size: 1440x900
+            port: 9515
+            browser: chrome
+            wait: 5
+            capabilities:
+                chromeOptions:
+                  args: ["--headless", "--disable-gpu"]
+        - Db:
+            dsn: 'mysql:host=localhost;dbname=ldb_test'
+            user: 'root'
+            password: 'root'
+            dump: 'structure.sql'
+            cleanup: true # run populator before each test
+            populate: true # run populator before all test
+        - \Helper\Acceptance
+# extensions:
+#     enabled:
+#         - Codeception\Extension\Recorder:
+#             delete_successful: false # keep screenshots of successful tests
+#             # module: AngularJS # enable for Angular

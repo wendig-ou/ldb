@@ -1,0 +1,12 @@
+[Unit]
+Description=ensure chromedriver is running
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/chromedriver --url-base=/wd/hub
+Restart=on-failure
+User=vagrant
+Group=vagrant
+
+[Install]
+WantedBy=multi-user.target

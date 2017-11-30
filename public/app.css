@@ -1,0 +1,296 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100%;
+  padding-bottom: 30rem;
+}
+
+.ldb-footer {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 6rem;
+  height: 20rem;
+  color: white;
+  font-size: 0.9em;
+}
+
+.ldb-footer img.logo {
+  display: block;
+  float: left;
+  margin-right: 4em;
+  height: 92px;
+}
+
+.ldb-footer a {
+  font-weight: bold;
+}
+
+.ldb-copyright {
+   margin-top: 1em;
+}
+
+h1 {
+  margin-bottom: 3rem;
+}
+
+i.glyphicon {
+  font-size: 1.5em;
+}
+
+.text-right a:hover {
+  text-decoration: none;
+}
+
+.text-right i.glyphicon {
+  margin-left: 0.5em;
+}
+
+.navbar i {
+  position: relative;
+  top: 5px;
+  margin-top: -5px;
+}
+
+.navbar img.logo {
+  display: block;
+  float: left;
+  margin-right: 1em;
+  width: 2em;
+}
+
+.navbar img.brand {
+  position: relative;
+  top: -7px;
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 25px;
+  color: #fafafa;
+}
+
+.igb-nowrap {
+  white-space: nowrap;
+}
+
+pagination {
+  display: block;
+  height: 81px;
+  overflow: auto;
+}
+
+pagination .pager {
+  text-align: left;
+}
+
+pagination .amount {
+  padding-left: 3rem;
+}
+
+.igb-grid a {
+  display: block;
+  color: black;
+}
+
+.igb-grid a:hover {
+  text-decoration: none;
+}
+
+.igb-grid a:active {
+  text-decoration: none;
+}
+
+.igb-grid a:hover .panel {
+  text-decoration: none;
+  box-shadow: 0 0 10px #3487a6;
+}
+
+.igb-grid-panel {
+  cursor: pointer;
+}
+
+a[disabled] .igb-grid-panel  {
+  cursor: not-allowed;
+}
+
+.igb-grid-panel .panel-body {
+  height: 15em;
+}
+
+.igb-grid-panel img {
+  max-width: 10em;
+  max-height: 10em;
+}
+
+.igb-grid-panel .icon {
+  margin-right: -1em;
+}
+
+.igb-grid-panel h3 {
+  margin-top: 0px;
+}
+
+people-editor .list-group-item {
+  cursor: pointer;
+}
+
+people-editor .list-group-item i {
+  position: relative;
+  top: 4px;
+  margin-right: 1rem;
+}
+
+people-editor .igb-label {
+  margin-top: 0.6rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.ldb-required {
+  font-size: 12px;
+}
+
+.ldb-submit > * {
+  float: right;
+  margin-left: 0.4em;
+}
+
+departments-selector .checkbox {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+h3 a {
+  margin-left: 1em;
+  position: relative;
+  top: -3px;
+}
+
+.igb-report-frame {
+  overflow: scroll;
+  position: absolute;
+  left: 0px;
+  top: 166px;
+  bottom: 200px;
+  right: 0px;
+}
+
+.igb-report h3 {
+  margin-bottom: 1em;
+}
+
+.igb-report hr {
+  clear: both;
+  width: 40%;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.ldb-sortable-column i {
+  font-size: 0.7em;
+}
+
+form.search {
+  margin-bottom: 1em;
+}
+
+form.search .form-group {
+  height: 3.5em;
+}
+
+form.search .ldb-verified {
+  position: relative;
+  top: 2px;
+}
+
+form.search .ldb-verified input {
+  position: relative;
+  top: 3px;
+  margin-left: 1em;
+}
+
+form.search pagination ul {
+  margin: 0px;
+}
+
+table.publications th:nth-child(1) {
+  min-width: 150px;
+}
+
+table.publications th:nth-child(2) {
+  min-width: 150px;
+}
+
+.alert a {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.alert a:visited {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.panel.ldb-help {
+  background-color: #e7e7e7;
+}
+
+.ldb-help i {
+  position: relative;
+  top: 4px;
+}
+
+.ldb-help p {
+  margin-top: 0.6em;
+}
+
+.ldb-show {
+  position: relative;
+  top: 2px;
+}
+
+.ldb-person {
+  padding-bottom: 10px;
+}
+
+table.ris-preflight .igb-label {
+  position: relative;
+  top: 1px;
+}
+
+table.ris-preflight td:nth-child(1) {
+  width: 150px;
+}
+
+table.ris-preflight td:nth-child(3) {
+  width: 300px;
+}
+
+.form-group.file label {
+  display: block;
+}
+
+file-select-feedback {
+  display: block;
+}
+
+@media print {
+  a[href]:after {
+    content: '';
+  }
+
+  .ldb-footer {
+    display: none;
+  }
+}
