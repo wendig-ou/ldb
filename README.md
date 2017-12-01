@@ -113,6 +113,8 @@ name.
 **How to add or change publication types**
 
 * add a record in the `super_types` table if a new one is required
+  * make sure there is a respective form for the super_type (matching column
+    `code`) in `application/views/publications/sub_forms`
 * add a record in the `ToW` table setting the `active` flag. The referenced
   super_type sets the web form.
 * if the chosen super_type is 'publication':
