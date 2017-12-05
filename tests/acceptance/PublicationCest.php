@@ -202,6 +202,27 @@ class PublicationCest
         $I->see('Doe, John', 'table');
     }
 
+    public function createSupervisionAndCreateInstitutionOnTheFly(AcceptanceTester $I)
+    {
+        $I->login('supervisor');
+        $I->click('create new work record');
+        $I->click("[data-code='sup'] a");
+
+        $I->fillField('Title of thesis', 'Eisbär-Analyse – ein Wasserstand');
+        $I->add_person('Doe, John');
+        $I->fillField('Date of defense', '20170421');
+        $I->click('Done'); # close the date picker
+        $I->fillField('Additional information', 'some info');
+        $I->fillField('institution-selector input[name=institution_name]', 'Haus des Meeres');
+
+        $I->click('save');
+
+        $I->see('record created successfully');
+        $I->seeInDatabase('igb_ldb_institutions', [
+            'institut' => 'Haus des Meeres'
+        ]);
+    }
+
     public function createMediaRelations(AcceptanceTester $I) 
     {
         $I->login('supervisor');

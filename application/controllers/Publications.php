@@ -306,7 +306,7 @@
           array_push($rules, [
             'field' => 'institution_id',
             'label' => 'lang:igb_field_'.$code.'_institution_id',
-            'rules' => 'required'
+            'rules' => 'callback_required_autocomplete[institution_name]'
           ]);
           array_push($rules, [
             'field' => 'edate',
