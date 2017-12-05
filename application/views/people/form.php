@@ -26,41 +26,6 @@
         'required' => TRUE
       ]); ?>
 
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_1',
-        'value' => $person['Verweisung1'],
-      ]); ?>
-
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_2',
-        'value' => $person['Verweisung2'],
-      ]); ?>
-
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_3',
-        'value' => $person['Verweisung3'],
-      ]); ?>
-
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_4',
-        'value' => $person['Verweisung4'],
-      ]); ?>
-
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_5',
-        'value' => $person['Verweisung5'],
-      ]); ?>
-
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_6',
-        'value' => $person['Verweisung6'],
-      ]); ?>
-
-      <?= text_field('reference_1', [
-        'label' => 'igb_field_reference_7',
-        'value' => $person['Verweisung7'],
-      ]); ?>
-      
       <hr />
 
       <div class="pull-right">
