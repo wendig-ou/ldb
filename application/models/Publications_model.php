@@ -149,6 +149,9 @@
         }
       }
 
+      $attribs['edate'] = $this->human_to_date($attribs['edate']);
+      $attribs['end_date'] = $this->human_to_date($attribs['end_date']);
+
       return $attribs;
     }
 
@@ -158,6 +161,9 @@
           $record['end_fdate'] = '-';
         }
       }
+
+      $record['edate'] = $this->date_to_human($record['edate']);
+      $record['end_date'] = $this->date_to_human($record['end_date']);
 
       return $record;
     }

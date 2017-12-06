@@ -14,7 +14,7 @@
 
     tag.on('mount', function() {
       $(tag.refs.input).datepicker({
-        dateFormat: 'yymmdd',
+        dateFormat: 'dd.mm.yy',
         numberOfMonths: 2,
         stepMonths: 2,
         showOtherMonths: true,
