@@ -23,7 +23,7 @@
         <input
           class="btn btn-primary"
           type="submit"
-          value="<?= lang('igb_save') ?>"
+          value="<?= lang('igb_preflight') ?>"
         />
       </div>
     </form>
