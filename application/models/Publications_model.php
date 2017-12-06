@@ -7,6 +7,7 @@
 
       $this->table_name = 'publications';
       $this->id_column = 'pid';
+      $this->name_column = 'title';
       $this->search_column = 'title';
       $this->sort_column = 'pid';
       $this->sort_direction = 'desc';
@@ -114,7 +115,7 @@
       }
 
       // error_log(print_r($options, TRUE));
-      // error_log($query->get_compiled_select(NULL, FALSE));
+      error_log($query->get_compiled_select(NULL, FALSE));
 
       return $query;
     }
@@ -143,7 +144,9 @@
           $attribs['end_fdate'] = NULL;
         }
       } else {
-        $attribs['end_fdate'] = $attribs['fdate'];
+        if (isset($attribs['fdate'])) {
+          $attribs['end_fdate'] = $attribs['fdate'];
+        }
       }
 
       return $attribs;

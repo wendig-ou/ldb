@@ -56,6 +56,7 @@ $route['users'] = 'users/index';
 $route['institutions'] = 'institutions/index';
 $route['periodicals'] = 'periodicals/index';
 $route['ris'] = 'ris/index';
+$route['impact_factor'] = 'impact_factor/index';
 
 // $route['publications'] = 'publications/index';
 $route['default_controller'] = 'publications';

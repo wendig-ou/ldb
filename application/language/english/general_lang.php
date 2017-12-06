@@ -42,6 +42,7 @@
   $lang['igb_data'] = 'data';
   $lang['igb_i_understand'] = 'I understand';
   $lang['igb_record_usage_count'] = 'used in records [#]';
+  $lang['igb_removed'] = 'removed';
 
   $lang['igb_notice_sign_in'] = 'signed in successfully as %s';
   $lang['igb_notice_sign_out'] = 'signed out successfully';
@@ -87,6 +88,7 @@
   $lang['igb_field_semester'] = 'semester';
   $lang['igb_field_date'] = 'date';
   $lang['igb_field_ris_file'] = 'Click to select a RIS formatted file';
+  $lang['igb_field_mapping'] = 'mapping (tab-separated or pipe-separated)';
   $lang['igb_field_pname_id'] = 'periodical';
 
   $lang['igb_field_pid'] = 'ID';
@@ -228,6 +230,7 @@
   $lang['igb_institution'] = 'institution';
   $lang['igb_institutions'] = 'institutions';
   $lang['igb_ris_import'] = 'RIS import';
+  $lang['igb_impact_factor_import'] = 'impact factor import';
   $lang['igb_reports'] = 'reports';
   $lang['igb_type'] = 'type';
 

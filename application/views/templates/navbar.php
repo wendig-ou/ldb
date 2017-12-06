@@ -38,6 +38,7 @@
                 <li><a href="/institutions"><?= lang('igb_institutions') ?></a></li>
                 <li><a href="/periodicals"><?= lang('igb_periodicals') ?></a></li>
                 <li><a href="/ris"><?= lang('igb_ris_import') ?></a></li>
+                <li><a href="/impact_factor"><?= lang('igb_impact_factor_import') ?></a></li>
               </ul>
             </li>
           <?php endif; ?>
