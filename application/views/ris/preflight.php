@@ -29,9 +29,11 @@
   <tbody>
     <?php foreach($records as $record): ?>
       <tr>
-        <td class="<?= $record['existing'] ? 'success' : '' ?>">
+        <td>
           <span class="text-muted"><?= ucfirst(lang('igb_field_ris_id')) ?>:</span>
-          <?= $record['record']['ris_id'] ?><br />
+          <span class="<?= $record['existing'] ? 'text-success' : '' ?>">
+            <?= $record['record']['ris_id'] ?><br />
+          </span>
           <span class="text-muted"><?= ucfirst(lang('igb_field_klr_tow')) ?>:</span>
           <?= $record['record']['klr_tow'] ?>
         </td>

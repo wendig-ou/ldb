@@ -38,10 +38,7 @@
         // error_log(print_r($record, TRUE));
 
         $id = $record['existing'];
-        if ($id) {
-          $this->CI->publications_model->update($id, $record['record']);
-          $report[]= [$id, 'existed'];
-        } else {
+        if (!$id) {
           $id = $this->CI->publications_model->create($record['record']);
           $report[]= [$id, 'new'];
         }

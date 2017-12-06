@@ -317,6 +317,7 @@ class PublicationCest
         ]);
 
         $I->click('Editor-in-Chief');
+        $I->wait(1);
         $I->fillField('Year of performance (to)', '2017');
         $I->click('save & go back to the list');
         $I->see('record updated successfully');
