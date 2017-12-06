@@ -162,8 +162,13 @@
         }
       }
 
-      $record['edate'] = $this->date_to_human($record['edate']);
-      $record['end_date'] = $this->date_to_human($record['end_date']);
+      if (isset($record['edate'])) {
+        $record['edate'] = $this->date_to_human($record['edate']);
+      }
+
+      if (isset($record['end_date'])) {
+        $record['end_date'] = $this->date_to_human($record['end_date']);
+      }
 
       return $record;
     }
