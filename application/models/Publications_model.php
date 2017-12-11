@@ -149,8 +149,12 @@
         }
       }
 
-      $attribs['edate'] = $this->human_to_date($attribs['edate']);
-      $attribs['end_date'] = $this->human_to_date($attribs['end_date']);
+      if (isset($attribs['edate'])) {
+        $attribs['edate'] = $this->human_to_date($attribs['edate']);
+      }
+      if (isset($attribs['end_date'])) {
+        $attribs['end_date'] = $this->human_to_date($attribs['end_date']);
+      }
 
       return $attribs;
     }
