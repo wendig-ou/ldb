@@ -31,7 +31,7 @@
           <?php if ($record['periodical']): ?>
             <?= $record['periodical']['pname'] ?> (<?= $record['periodical']['pid'] ?>)
           <?php else: ?>
-            <?= $record['periodical']['pname'] ?> (NOT FOUND)
+            <?= $record['periodical_name'] ?> (NOT FOUND)
           <?php endif ?>
         </td>
         <td>
