@@ -60,7 +60,6 @@
           $where[] = "(fdate <= ".$year." AND (end_fdate IS NULL OR end_fdate = '' OR end_fdate >= ".$year."))";
         }
         $where = implode(' OR ', $where);
-        // error_log($where." AND NOT (fdate IS NULL OR fdate = '') AND (end_fdate IS NULL OR end_fdate = '')");
         $query = $query->where(
           '('.$where." AND NOT ((fdate IS NULL OR fdate = '') AND (end_fdate IS NULL OR end_fdate = '')))"
         );
@@ -71,7 +70,6 @@
         $query = $query
           ->join('igb_ldb_lom_authors l', 'l.publication_id = publications.pid', 'left')
           ->join('igb_ldb_lom_persons pe', 'l.lpid = pe.lpid', 'left')
-          ->like('pe.Person', $options['people'])
           ->where("(pe.Person LIKE '%".$people."%' OR publications.authors LIKE '%".$people."%')");
       }
 
