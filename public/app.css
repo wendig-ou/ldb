@@ -178,10 +178,10 @@ h3 a {
 .igb-report-frame {
   overflow: scroll;
   position: absolute;
-  left: 0px;
+  left: 20px;
   top: 166px;
   bottom: 200px;
-  right: 0px;
+  right: 20px;
 }
 
 .igb-report h3 {
