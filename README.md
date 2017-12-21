@@ -11,6 +11,8 @@ various ways. Please contact [Lydia  Koglin](mailto:koglin@igb-berlin.de) if you
 like to know more about the implementation at IGB. The application was
 implemented by [Wendig OÜ](https://wendig.io).
 
+Have a look at [some screenshots](https://github.com/wendig-ou/ldb/wiki)!
+
 ## Development setup
 
 * install VirtualBox (https://www.virtualbox.org/)
