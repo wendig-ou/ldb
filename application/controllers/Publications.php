@@ -192,10 +192,17 @@
 
         if (!isset($data['fdate']) || !$data['fdate'])
           $data['fdate'] = strftime('%Y');
-        if (!isset($data['end_fdate']) || !$data['end_fdate'])
-          $data['end_fdate'] = strftime('%Y');
+        
+        if (!isset($data['end_fdate']) || !$data['end_fdate']) {
+          if (isset($data['fdate']) && $data['fdate'])
+            $data['end_fdate'] = $data['fdate'];
+          else
+            $data['end_fdate'] = strftime('%Y');
+        }
+
         if (!isset($data['dpmt']) || !$data['dpmt'])
           $data['dpmt'] = $data['dpmt'] ?? $this->current_user()['dpmt'];
+        
         if (!isset($data['klr_tow']) || !$data['klr_tow'])
           $data['klr_tow'] = $this->input->post('klr_tow');
       }

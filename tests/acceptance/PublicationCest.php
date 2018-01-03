@@ -165,7 +165,8 @@ class PublicationCest
         $I->fillField('Place of conference or workshop', 'San Francisco');
         $I->fillField('Start date of conference', '20170417');
         $I->fillField('End date of conference', '20170421');
-        // $I->click('Done'); # close the date picker
+        $I->wait(1);
+        $I->click('Done'); # close the date picker
         $I->add_person('Doe, John');
 
         $I->click('save');
@@ -235,6 +236,7 @@ class PublicationCest
         $I->click('Done'); # close the date picker
         $I->fillField('Citation', 'some citation');
         $I->fillField('Type of medium', 'online post');
+        $I->fillField('Year of performance', '2017');
 
         $I->click('save');
 
@@ -244,6 +246,7 @@ class PublicationCest
         $I->see('Twitter post', 'table');
         $I->see('Notes: some citation', 'table');
         $I->see('Doe, John', 'table');
+        $I->dontSee('2017-', 'table');
     }
 
     public function createEditorialActivities(AcceptanceTester $I) 

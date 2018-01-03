@@ -8,13 +8,13 @@
     ></departments-selector>
 
     <?= text_field('fdate', [
-      'label' => 'igb_field_media_fdate', 
+      'label' => 'igb_field_media_fdate',
       'value' => $publication['fdate'],
       'required' => TRUE
     ]); ?>
 
     <?= check_box('ct', [
-      'label' => 'igb_field_ct', 
+      'label' => 'igb_field_ct',
       'value' => $publication['ct'],
       'disabled' => !can_verify($current_user, $publication)
     ]); ?>
