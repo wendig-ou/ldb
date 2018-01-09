@@ -138,7 +138,9 @@
         'Forschungsbericht' => '01.13',
         'Autorenschaft national' => '01.14',
         'Autorenschaft IGB Dossier' => '09.10',
-        'Forschungsdaten' => '01.15'
+        'Forschungsdaten' => '01.15',
+        'Autorenschaft IGB Fact Sheet' => '09.11',
+        'Autorenschaft IGB Policy Brief' => '09.12'
       ];
 
       $u2 = $this->read($raw, 'U2');
