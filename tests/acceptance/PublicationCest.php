@@ -160,6 +160,7 @@ class PublicationCest
         $I->click("[data-code='pres'] a");
         $I->see('Presentation');
 
+        $I->selectOption('input[name=klr_tow]', '03.01');
         $I->fillField('Title of presentation or talk', 'Ruby talk');
         $I->fillField('Name of conference or workshop, optional: organizer or association', 'Railsconf');
         $I->fillField('Place of conference or workshop', 'San Francisco');
@@ -525,6 +526,26 @@ class PublicationCest
         $I->checkOption('D');
         $I->click('save & go back to the list');
         $I->see('record updated successfully');
+    }
+
+    public function changeTypeOfWork(AcceptanceTester $I)
+    {
+        $I->test_data(['publications' => TRUE]);
+        $I->login('supervisor');
+        $I->amOnPage('/');
+
+        $I->click('Some presentation');
+        $I->fillField('Name of conference or workshop, optional: organizer or association', 'WaterConf 2019');
+        $I->fillField('place', 'Nürnberg');
+        $I->fillField('Start date of conference', '20170417');
+        $I->add_person('Doe, John');
+        $I->selectOption('input[name=klr_tow]', '03.04');
+        $I->click('save');
+
+        $I->seeInDatabase('publications', [
+            'title' => 'Some presentation',
+            'klr_tow' => '03.04'
+        ]);
     }
 
     public function returnToListAfterErrors(AcceptanceTester $I)

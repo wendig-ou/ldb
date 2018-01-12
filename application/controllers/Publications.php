@@ -181,7 +181,8 @@
         'editors' => $this->input->post('editors'),
         'faculty' => $this->input->post('faculty'),
         'open_access' => $this->input->post('open_access'),
-        'authors' => $this->input->post('authors')
+        'authors' => $this->input->post('authors'),
+        'klr_tow' => $this->input->post('klr_tow')
       );
 
 
@@ -202,9 +203,6 @@
 
         if (!isset($data['dpmt']) || !$data['dpmt'])
           $data['dpmt'] = $data['dpmt'] ?? $this->current_user()['dpmt'];
-        
-        if (!isset($data['klr_tow']) || !$data['klr_tow'])
-          $data['klr_tow'] = $this->input->post('klr_tow');
       }
 
       // error_log(print_r($this->current_user(), TRUE));
@@ -231,7 +229,7 @@
           ],[
             'field' => 'klr_tow',
             'label' => 'lang:igb_field_klr_tow',
-            'rules' => 'required'
+            'rules' => 'required|callback_keep_super_type'
           ],[
             'field' => 'people',
             'label' => 'lang:igb_field_people',
@@ -510,6 +508,18 @@
           // error_log(print_r($people, TRUE));
           return preg_match('/^[\p{Lu}\p{Lt}][^,]*, [\p{Lu}\p{Lt}].*$/', $person[1]) == 1;
         }
+      }
+
+      return TRUE;
+    }
+
+    public function keep_super_type($tow) {
+      if (isset($this->data['id']) && $this->data['id']) {
+        $id = $this->data['id'];
+        $old = $this->data[$this->resource]['klr_tow'];
+        $old = $this->types_model->get($old);
+        $new = $this->types_model->get($tow);
+        return $old['super_type_id'] == $new['super_type_id'];
       }
 
       return TRUE;

@@ -63,6 +63,12 @@ class Acceptance extends \Codeception\Module
                 'active' => 1,
                 'super_type_id' => $id,
             ]);
+            $db->haveInDatabase('ToW', [
+                'tow' => '03.04',
+                't_desc' => 'contributed/other talk',
+                'active' => 1,
+                'super_type_id' => $id,
+            ]);
 
             $id = $db->haveInDatabase('super_types', ['name' => 'publication', 'code' => 'pub']);
             $db->haveInDatabase('ToW', [
