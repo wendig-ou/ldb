@@ -20,7 +20,7 @@ function base {
 
   apt-get install -y zip libgconf-2-4 chromium-browser
   cd /opt
-  wget https://chromedriver.storage.googleapis.com/2.32/chromedriver_linux64.zip
+  wget https://chromedriver.storage.googleapis.com/2.41/chromedriver_linux64.zip
   unzip chromedriver_linux64.zip
   ln -sfn /opt/chromedriver /usr/bin/chromedriver
   rm chromedriver_linux64.zip
