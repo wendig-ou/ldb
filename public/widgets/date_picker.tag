@@ -37,7 +37,7 @@
       if (opts.name == 'end_date') {
         var date = $(tag.refs.input).datepicker('getDate');
         var fromDate = $('date-picker[name=edate] input').datepicker('getDate');
-        console.log(fromDate, date);
+        // console.log(fromDate, date);
         tag.valid = (fromDate <= date);
         tag.update();
       }

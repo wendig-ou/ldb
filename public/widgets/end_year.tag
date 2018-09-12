@@ -38,14 +38,14 @@
     tag.ongoing = false;
 
     tag.on('mount', function() {
-      console.log(tag.opts);
+      // console.log(tag.opts);
       tag.ongoing = (tag.opts.value == '-');
       $(tag.refs.checkbox).prop('checked', tag.ongoing);
       tag.update();
     });
 
     tag.on('update', function() {
-      console.log(tag.ongoing);
+      // console.log(tag.ongoing);
       $(tag.refs.input).prop('disabled', tag.ongoing);
       $(tag.refs.hidden).prop('disabled', !tag.ongoing);
 

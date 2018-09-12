@@ -294,3 +294,13 @@ file-select-feedback {
     display: none;
   }
 }
+
+type-details {
+  display: block;
+  margin-top: 39px;
+  min-height: 100%;
+}
+
+type-details .alert {
+  min-height: 100%;
+}

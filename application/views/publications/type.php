@@ -8,6 +8,10 @@
       ]); ?>
 
     </div>
+
+    <div class="col-md-6">
+      <type-details></type-details>
+    </div>
   </div>
 
   <hr />

@@ -152,7 +152,7 @@
 
     var parseExisting = function() {
       tag.data = JSON.parse(tag.opts.value);
-      console.log(tag.data);
+      // console.log(tag.data);
       var ids = [];
       for (var i = 0; i < tag.data.length; i++) {
         var personId = tag.data[i][1];
