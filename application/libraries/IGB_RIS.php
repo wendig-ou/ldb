@@ -212,11 +212,11 @@
     private function is_igb($name)
     {
       $parts = preg_split('/\s*,\s*/', $name);
-      // error_log($name);
+      if (sizeof($parts) < 2) {
+        error_log('there should be a comma in "' . $name . '"');
+      }
       $no_comma = $parts[1].' '.$parts[0];
       $no_middle = preg_replace('/\s+[A-Z]\.\s+/', ' ', $no_comma);
-      // error_log($no_comma);
-      // error_log($no_middle);
       return(
         !!$this->CI->users_model->get_active_by_name($name) ||
         !!$this->CI->users_model->get_active_by_name($no_comma) ||
