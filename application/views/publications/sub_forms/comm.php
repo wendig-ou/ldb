@@ -43,6 +43,11 @@
       'required' => TRUE
     ]); ?>
 
+    <?= check_box('eu_comm', [
+      'label' => 'igb_field_comm_eu_comm', 
+      'value' => $publication['eu_comm']
+    ]); ?>
+
   </div>
   <div class="col-md-3">
 

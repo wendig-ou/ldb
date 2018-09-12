@@ -157,6 +157,7 @@
   $lang['igb_field_comm_people'] = 'persons';
   $lang['igb_field_comm_notes'] = 'name of committee, society or association';
   $lang['igb_help_comm_notes'] = 'e. g. Gesellschaft zur Rettung des Störs e.V.';
+  $lang['igb_field_comm_eu_comm'] = 'part of EU commission or committee advisory or expert group';
 
   $lang['igb_field_pub_fdate'] = 'year of publication';
   $lang['igb_field_pub_people'] = 'authors';

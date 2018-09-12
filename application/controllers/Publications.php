@@ -182,7 +182,8 @@
         'faculty' => $this->input->post('faculty'),
         'open_access' => $this->input->post('open_access'),
         'authors' => $this->input->post('authors'),
-        'klr_tow' => $this->input->post('klr_tow')
+        'klr_tow' => $this->input->post('klr_tow'),
+        'eu_comm' => $this->input->post('eu_comm')
       );
 
 
