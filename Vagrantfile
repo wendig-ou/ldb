@@ -1,4 +1,5 @@
 Vagrant.configure("2") do |config|
+  config.vagrant.plugins = ['vagrant-vbguest']
   config.vm.box = "bento/ubuntu-16.04"
 
   config.vm.define "dev", :primary => true do |c|
