@@ -4,6 +4,9 @@
       action="/publications/<?= (isset($id) ? 'edit/'.$id : 'new') ?>?super-type-id=<?= $super_type_id ?>"
       method="POST"
     >
+      <div class="pull-right">
+        <?= dimension_badge($publication['doi'], ['data_legend' => 'hover-left']); ?>
+      </div>
       <h1>
         <?php if (isset($id))
           echo ucfirst(sprintf(lang('igb_edit'), $id));

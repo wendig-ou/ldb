@@ -1,6 +1,6 @@
 <type-details>
   <div
-    if={anySelected()}
+    if={active()}
     class="alert alert-info"
   >
     <strong>Heads up!</strong><br />
@@ -15,13 +15,8 @@
       handler();
     });
 
-    tag.anySelected = function() {
-      return(
-        tag.type != null &&
-        tag.type != undefined &&
-        tag.type != '' &&
-        tag.type != []
-      );
+    tag.active = function() {
+      return anySelected() && tag.text() != undefined;
     }
 
     tag.text = function() {
@@ -31,6 +26,15 @@
         '04.03': 'Cras faucibus sed lacus vitae bibendum. Vivamus pulvinar tincidunt nibh eget eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
         '04.04': 'Vivamus iaculis vestibulum efficitur. Nam cursus auctor risus eget viverra. Cras dignissim venenatis turpis. Praesent quis cursus nunc.'
       }[tag.type];
+    }
+
+    var anySelected = function() {
+      return(
+        tag.type != null &&
+        tag.type != undefined &&
+        tag.type != '' &&
+        tag.type != []
+      );
     }
 
     var handler = function(type) {

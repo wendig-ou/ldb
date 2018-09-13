@@ -11,6 +11,7 @@
     <script type="text/javascript" src="/jquery.min.js"></script>
     <script type="text/javascript" src="/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/bootstrap.min.js"></script>
+    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
     <script type="text/javascript" src="/riot+compiler.min.js"></script>
 
     <script type="riot/tag" data-src="/widgets/igb.tag"></script>

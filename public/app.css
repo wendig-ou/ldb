@@ -234,6 +234,17 @@ table.publications th:nth-child(2) {
   min-width: 150px;
 }
 
+table.publications .__dimensions_badge_embed__ {
+  position: absolute;
+  margin-left: -90px;
+}
+
+@media only screen and (max-width: 1350px) {
+  table.publications .__dimensions_badge_embed__ {
+    display: none;
+  }
+}
+
 .alert a {
   color: white;
   font-weight: bold;

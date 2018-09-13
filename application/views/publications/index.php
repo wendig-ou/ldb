@@ -130,6 +130,7 @@
     <?php foreach ($publications as $publication): ?>
       <tr data-id="<?= $publication['pid'] ?>">
         <td title="<?= $types[$publication['klr_tow']]['t_desc'] ?>">
+          <?= dimension_badge($publication['doi']); ?>
           <span class="text-muted"><?= ucfirst(lang('igb_field_pid')) ?>:</span>
           <?= $publication['pid'] ?><br />
           <span class="text-muted"><?= ucfirst(lang('igb_field_klr_tow')) ?>:</span>

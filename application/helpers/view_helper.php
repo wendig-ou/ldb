@@ -338,4 +338,18 @@
     }
   }
 
+  if (!function_exists('dimension_badge')) {
+    function dimension_badge($doi, $options = []) {
+      $defaults = [
+        'doi' => $doi,
+        'data_legend' => 'never'
+      ];
+      $options = array_merge($defaults, $options);
+
+      if ($doi) {
+        return get_instance()->load->view('partials/dimension_badge', $options, TRUE);
+      }
+    }
+  }
+
 ?>
