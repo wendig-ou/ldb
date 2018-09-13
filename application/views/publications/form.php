@@ -8,11 +8,17 @@
         <?= dimension_badge($publication['doi'], ['data_legend' => 'hover-left']); ?>
       </div>
       <h1>
-        <?php if (isset($id))
-          echo ucfirst(sprintf(lang('igb_edit'), $id));
-        else
-          echo ucfirst(sprintf(lang('igb_create_new'), lang('igb_publication')));
-        ?>
+        <?php if (isset($id)): ?>
+          <?= ucfirst(sprintf(lang('igb_edit'), $id)) ?>
+        <?php else: ?>
+          <?= ucfirst(sprintf(lang('igb_create_new'), lang('igb_publication'))) ?>
+
+          <?php if (isset($super_type)): ?>
+            <p class="lead">
+              <?= $super_type['name'] ?>
+            </p>
+          <?php endif ?>
+        <?php endif ?>
       </h1>
 
       <?php if ($super_type_id && $super_type['help']): ?>

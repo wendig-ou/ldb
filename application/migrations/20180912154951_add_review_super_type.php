@@ -5,7 +5,7 @@
 
       $this->db->insert('super_types', [
         'name' => 'reviews',
-        'description' => 'description for the supertype "reviews"',
+        'description' => 'Aggregated numbers of review activities (e.g. commissioned reports, position papers, peer review)',
         'code' => 'rev'
       ]);
       $id = $this->db->insert_id();
