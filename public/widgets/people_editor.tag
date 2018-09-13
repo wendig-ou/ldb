@@ -26,8 +26,8 @@
         >
           <i onclick={remove} class="glyphicon glyphicon-remove"></i>
           <div class="igb-label pull-right">
-            <span if={toBool(record[2])} class="label label-primary">IGB</span>
-            <span if={!toBool(record[2])} class="label label-default">IGB</span>
+            <div if={toBool(record[2])} class="label label-primary">is IGB</div>
+            <div if={!toBool(record[2])} class="label label-default">no IGB</div>
           </div>
           {labelFor(record)}
         </li>
