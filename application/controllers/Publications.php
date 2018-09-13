@@ -183,7 +183,11 @@
         'open_access' => $this->input->post('open_access'),
         'authors' => $this->input->post('authors'),
         'klr_tow' => $this->input->post('klr_tow'),
-        'eu_comm' => $this->input->post('eu_comm')
+        'eu_comm' => $this->input->post('eu_comm'),
+        'num_comm_reports' => $this->input->post('num_comm_reports'),
+        'num_position_papers' => $this->input->post('num_position_papers'),
+        'num_reviews' => $this->input->post('num_reviews'),
+        'num_reviews_eu' => $this->input->post('num_reviews_eu')
       );
 
 

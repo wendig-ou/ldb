@@ -1,12 +1,10 @@
 <?php if (sizeof($types) > 1): ?>
   <div class="row">
     <div class="col-md-6">
-
       <?= type_selector('klr_tow', [
         'value' => $publication['klr_tow'],
         'variant' => 'radios'
       ]); ?>
-
     </div>
 
     <div class="col-md-6">

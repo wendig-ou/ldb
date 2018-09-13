@@ -136,6 +136,10 @@ a[disabled] .igb-grid-panel  {
   margin-top: 0px;
 }
 
+people-editor {
+  display: block;
+}
+
 people-editor .list-group-item {
   cursor: pointer;
 }

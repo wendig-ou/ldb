@@ -1,4 +1,4 @@
-<div class="form-group form-group-sm">
+<div class="form-group">
   <?php if ($label): ?>
     <label class="form-label" for="<?= 'field_'.$name ?>">
       <?= ucfirst($label) ?>

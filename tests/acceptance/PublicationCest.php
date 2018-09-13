@@ -365,6 +365,32 @@ class PublicationCest
         $I->see('Doe, John', 'table');
     }
 
+    public function createReview(AcceptanceTester $I) 
+    {
+        $I->login('supervisor');
+        $I->click('create new work record');
+        $I->click("[data-code='rev'] a");
+
+        $I->fillField('Year', '2018');
+        $I->fillField('Number of commissioned reports for political stakeholders', '12');
+        $I->fillField('Number of position papers', '7');
+        $I->fillField('Number of reviews (other, e. g. peer review)', '44');
+        $I->fillField('Number of reviews of EU projects', '3');
+        $I->add_person('Doe, John');
+        $I->click('save');
+
+        $I->see('record created successfully');
+        $I->see('10.01', 'table');
+        $I->see('Reviews (aggregated)', 'table');
+        $I->see('Doe, John', 'table');
+        $I->seeInDatabase('publications', [
+            'num_comm_reports' => 12,
+            'num_position_papers' => 7,
+            'num_reviews' => 44,
+            'num_reviews_eu' => 3
+        ]);
+    }
+
     public function createInstitutionOnTheFly(AcceptanceTester $I)
     {
         $I->login('supervisor');

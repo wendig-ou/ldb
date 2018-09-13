@@ -249,6 +249,12 @@
             </div>
           <?php endif; ?>
 
+          <?php if ($types[$publication['klr_tow']]['super_type_code'] == 'rev'): ?>
+            <a
+              href="/publications/edit/<?= $publication['pid'] ?>"
+            >Reviews (aggregated)</a>
+          <?php endif; ?>
+
           <?php if ($publication['klr_tow'] == '01.01'): ?>
             <div>
               <span class="text-muted"><?= ucfirst(lang('igb_field_pub_impactf')) ?>:</span>

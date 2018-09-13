@@ -2,8 +2,8 @@
   <div class="form-group">
     <input type="hidden" name={opts.name} value={JSON.stringify(data)} />
 
-    <label form-label>{opts.label}</label>
-    <span class="ldb-required">*</span>
+    <label class="form-label">{opts.label}</label><!--
+    --><span class="ldb-required"> *</span>
     <input
       class="form-control"
       type="text"

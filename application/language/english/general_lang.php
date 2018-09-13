@@ -203,6 +203,11 @@
   $lang['igb_field_edit_notes'] = 'journal';
   $lang['igb_help_edit_notes'] = 'e. g. Journal of Limnology, Inland Waters, Freshwater Information Platform';
 
+  $lang['igb_field_rev_num_comm_reports'] = 'number of commissioned reports for political stakeholders';
+  $lang['igb_field_rev_num_position_papers'] = 'number of position papers';
+  $lang['igb_field_rev_num_reviews'] = 'number of reviews (other, e. g. peer review)';
+  $lang['igb_field_rev_num_reviews_eu'] = 'number of reviews of EU projects';
+
   $lang['igb_form_validation_password'] = 'Sign in failed. Please check username and/or password';
   $lang['form_validation_is_role'] = 'The {field} field must be a valid role';
   $lang['form_validation_matches_password']   = 'The {field} field must match the password';

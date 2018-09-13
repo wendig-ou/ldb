@@ -131,6 +131,14 @@ class Acceptance extends \Codeception\Module
                 'active' => 1,
                 'super_type_id' => $id
             ]);
+
+            $id = $db->haveInDatabase('super_types', ['name' => 'review', 'code' => 'rev']);
+            $db->haveInDatabase('ToW', [
+                'tow' => '10.01',
+                't_desc' => 'review',
+                'active' => 1,
+                'super_type_id' => $id,
+            ]);
         }
 
         if (isset($config['people'])) {
