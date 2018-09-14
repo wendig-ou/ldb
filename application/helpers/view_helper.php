@@ -341,6 +341,7 @@
   if (!function_exists('dimension_badge')) {
     function dimension_badge($doi, $options = []) {
       $defaults = [
+        'style' => 'small_circle',
         'doi' => $doi,
         'data_legend' => 'never'
       ];

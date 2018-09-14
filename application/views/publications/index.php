@@ -130,7 +130,6 @@
     <?php foreach ($publications as $publication): ?>
       <tr data-id="<?= $publication['pid'] ?>">
         <td title="<?= $types[$publication['klr_tow']]['t_desc'] ?>">
-          <?= dimension_badge($publication['doi']); ?>
           <span class="text-muted"><?= ucfirst(lang('igb_field_pid')) ?>:</span>
           <?= $publication['pid'] ?><br />
           <span class="text-muted"><?= ucfirst(lang('igb_field_klr_tow')) ?>:</span>
@@ -262,6 +261,11 @@
               <?= $publication['impactf'] ?>
             </div>
           <?php endif; ?>
+
+          <?= dimension_badge($publication['doi'], [
+            'style' => 'small_rectangle',
+            'data_legend' => 'hover_right'
+          ]) ?>
         </td>
         <td>
           <?php if ($types[$publication['klr_tow']]['super_type_code'] == 'sup'): ?>
