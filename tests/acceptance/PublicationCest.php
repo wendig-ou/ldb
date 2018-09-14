@@ -202,6 +202,14 @@ class PublicationCest
         $I->see('Eisbär-Analyse – ein Wasserstand', 'table');
         $I->see('Notes: some info', 'table');
         $I->see('Doe, John', 'table');
+
+        # Try to create a duplicate
+        $I->click('create new work record');
+        $I->click("[data-code='sup'] a");
+        $I->add_person('Doe, John');
+        $I->fillField('Date of defense', '20170421');
+        $I->click('save');
+        $I->see('a supervision entry with this date of defense and these exact author(s) already exists');
     }
 
     public function createSupervisionAndCreateInstitutionOnTheFly(AcceptanceTester $I)

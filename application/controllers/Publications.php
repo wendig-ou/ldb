@@ -323,6 +323,11 @@
             'label' => 'lang:igb_field_'.$code.'_edate',
             'rules' => 'required'
           ]);
+          // array_push($rules, [
+          //   'field' => 'edate',
+          //   'label' => 'lang:igb_field_'.$code.'_edate',
+          //   'rules' => 'callback_supervision_unique[people]'
+          // ]);
         }
 
         if ($code == 'media') {
@@ -528,6 +533,15 @@
       }
 
       return TRUE;
+    }
+
+    public function supervision_unique($value, $authors) {
+      error_log('----');
+      error_log($value);
+      error_log(print_r($this->data, TRUE));
+      error_log('----');
+
+      return FALSE;
     }
   }
 ?>
