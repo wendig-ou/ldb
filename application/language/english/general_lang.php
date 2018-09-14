@@ -203,6 +203,7 @@
   $lang['igb_field_edit_notes'] = 'journal';
   $lang['igb_help_edit_notes'] = 'e. g. Journal of Limnology, Inland Waters, Freshwater Information Platform';
 
+  $lang['igb_field_rev_people'] = 'name of the reviewer';
   $lang['igb_field_rev_num_comm_reports'] = 'number of commissioned reports for political stakeholders';
   $lang['igb_field_rev_num_position_papers'] = 'number of position papers';
   $lang['igb_field_rev_num_reviews'] = 'number of reviews (other, e. g. peer review)';
