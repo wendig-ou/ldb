@@ -66,18 +66,19 @@
     ]); ?>
   </div>
   <div class="col-md-3">
-
     <people-editor
       label="<?= ucfirst(lang('igb_field_sup_people')) ?>"
       name="people"
       value="<?= html_escape($people) ?>"
     ></people-editor>
 
-    <people-editor
-      label="<?= ucfirst(lang('igb_field_sup_supervisors')) ?>"
-      name="supervisors"
-      value="<?= html_escape($supervisors) ?>"
-    ></people-editor>
+    <if-type except="04.01">
+      <people-editor
+        label="<?= ucfirst(lang('igb_field_sup_supervisors')) ?>"
+        name="supervisors"
+        value="<?= html_escape($supervisors) ?>"
+      ></people-editor>
+    </if-type>
 
     <?php if (has_role(['admin', 'library'])): ?>
       <?= text_area('authors', [

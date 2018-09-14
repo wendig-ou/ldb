@@ -37,10 +37,20 @@
       //   (categories[igb.currentType] == tag.opts.category) &&
       //   (!tag.opts.except || !tag.opts.except.match(igb.currentType))
       // );
-      return (
-        (categories[igb.currentType] == tag.opts.category) &&
-        (!tag.opts.except || !tag.opts.except.match(igb.currentType))
-      )
+      if (tag.opts.category) {
+        return (
+          (categories[igb.currentType] == tag.opts.category) &&
+          (!tag.opts.except || !tag.opts.except.match(igb.currentType))
+        )
+      }
+
+      if (tag.opts.tow) {
+        return igb.currentType == tag.opts.tow;
+      }
+
+      if (tag.opts.except) {
+        return igb.currentType != tag.opts.except;
+      }
     }
     
     handler = function() {

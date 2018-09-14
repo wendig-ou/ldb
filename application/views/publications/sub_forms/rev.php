@@ -51,7 +51,7 @@
 
   <div class="col-md-3">
     <people-editor
-      label="<?= ucfirst(lang('igb_field_comm_people')) ?>"
+      label="<?= ucfirst(lang('igb_field_rev_people')) ?>"
       name="people"
       value="<?= html_escape($people) ?>"
     ></people-editor>
