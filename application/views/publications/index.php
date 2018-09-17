@@ -170,6 +170,13 @@
                     width="8px"
                   />
                 <?php endif ?>
+                <?php if ($publication['green_open_access']): ?>
+                  <img
+                    title="<?= lang('igb_field_pub_green_open_access') ?>"
+                    src="/images/goa.png"
+                    width="8px"
+                  />
+                <?php endif ?>
               <?php endif ?>
             </div>
           <?php endif; ?>

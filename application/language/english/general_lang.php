@@ -186,6 +186,10 @@
   $lang['igb_field_sup_institution_id'] = 'location';
   $lang['igb_field_sup_faculty'] = 'faculty';
 
+  $lang['igb_field_pub_green_open_access'] = 'green open access';
+  $lang['igb_field_pub_embargo_date'] = 'embargo date';
+  $lang['igb_field_pub_link'] = 'link (self-archived document)';
+
   $lang['igb_field_media_fdate'] = 'year of performance';
   $lang['igb_field_media_people'] = 'persons';
   $lang['igb_field_media_title'] = 'title';

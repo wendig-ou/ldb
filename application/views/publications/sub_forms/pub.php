@@ -4,7 +4,6 @@
 
 <div class="row">
   <div class="col-md-3">
-
     <departments-selector
       label="igb_field_dpmts"
       departments="<?= implode(',', $departments) ?>"
@@ -27,10 +26,8 @@
       'label' => 'igb_field_open_access', 
       'value' => $publication['open_access']
     ]); ?>
-
   </div>
   <div class="col-md-6">
-
     <?= text_area('title', [
       'label' => 'igb_field_pub_title',
       'value' => $publication['title'],
@@ -178,9 +175,28 @@
       'label' => 'igb_field_pub_editors',
       'value' => $publication['editors']
     ]); ?>
-  </div>
-  <div class="col-md-3">
 
+    <if-type tow="01.01, 01.02">
+      <hr />
+
+      <?= check_box('green_open_access', [
+        'label' => 'igb_field_pub_green_open_access',
+        'value' => $publication['green_open_access'],
+      ]); ?>
+
+      <?= text_field('link', [
+        'label' => 'igb_field_pub_link',
+        'value' => $publication['link']
+      ]); ?>
+
+      <?= date_field('embargo_date', [
+        'label' => 'igb_field_pub_embargo_date',
+        'value' => $publication['embargo_date']
+      ]); ?>
+    </if-type>
+  </div>
+
+  <div class="col-md-3">
     <people-editor
       label="<?= ucfirst(lang('igb_field_pub_people')) ?>"
       name="people"
@@ -200,7 +216,5 @@
         </div>
       <?php endif; ?>
     <?php endif ?>
-
   </div>
-
 </div>

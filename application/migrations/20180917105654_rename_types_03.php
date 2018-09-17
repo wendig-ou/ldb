@@ -5,7 +5,7 @@
 
       $this->db->
         set('description', 'Supervision of bachelor, master and doctoral thesis and finalized habilitations. Only completed theses, no on-going supervision.')->
-        set('help', 'Supervision of bachelor, master and doctoral thesis and finalized habilitations. Only completed theses, no on-going supervision. For date please use the date of the defense.')
+        set('help', 'Supervision of bachelor, master and doctoral thesis and finalized habilitations. Only completed theses, no on-going supervision. For date please use the date of the defense.')->
         where('code', 'sup')->
         update('super_types');
     }

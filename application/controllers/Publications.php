@@ -187,7 +187,10 @@
         'num_comm_reports' => $this->input->post('num_comm_reports'),
         'num_position_papers' => $this->input->post('num_position_papers'),
         'num_reviews' => $this->input->post('num_reviews'),
-        'num_reviews_eu' => $this->input->post('num_reviews_eu')
+        'num_reviews_eu' => $this->input->post('num_reviews_eu'),
+        'green_open_access' => $this->input->post('green_open_access'),
+        'link' => $this->input->post('link'),
+        'embargo_date' => $this->input->post('embargo_date')
       );
 
 

@@ -45,7 +45,13 @@
       }
 
       if (tag.opts.tow) {
-        return igb.currentType == tag.opts.tow;
+        var tows = tag.opts.tow.split(/\s*,\s*/);
+        for (var i = 0; i < tows.length; i++) {
+          if (tows[i] == igb.currentType) {
+            return true
+          }
+        }
+        return false;
       }
 
       if (tag.opts.except) {
