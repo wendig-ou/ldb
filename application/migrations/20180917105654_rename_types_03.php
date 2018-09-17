@@ -8,6 +8,11 @@
         set('help', 'Supervision of bachelor, master and doctoral thesis and finalized habilitations. Only completed theses, no on-going supervision. For date please use the date of the defense.')->
         where('code', 'sup')->
         update('super_types');
+
+      $this->db->
+        set('t_desc', 'supervision of finalized doctoral thesis')->
+        where('tow', '04.02')->
+        update('ToW');
     }
 
     public function down() {
