@@ -4,9 +4,11 @@
       action="/publications/<?= (isset($id) ? 'edit/'.$id : 'new') ?>?super-type-id=<?= $super_type_id ?>"
       method="POST"
     >
-      <div class="pull-right">
-        <?= dimension_badge($publication['doi'], ['data_legend' => 'hover-left']); ?>
-      </div>
+      <?php if (getenv('LDB_USE_DIMENSION_BADGES') == 'true'): ?>
+        <div class="pull-right">
+          <?= dimension_badge($publication['doi'], ['data_legend' => 'hover-left']); ?>
+        </div>
+      <?php endif ?>
       <h1>
         <?php if (isset($id)): ?>
           <?= ucfirst(sprintf(lang('igb_edit'), $id)) ?>

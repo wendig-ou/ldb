@@ -262,10 +262,12 @@
             </div>
           <?php endif; ?>
 
-          <?= dimension_badge($publication['doi'], [
-            'style' => 'small_rectangle',
-            'data_legend' => 'hover_right'
-          ]) ?>
+          <?php if (getenv('LDB_USE_DIMENSION_BADGES') == 'true'): ?>
+            <?= dimension_badge($publication['doi'], [
+              'style' => 'small_rectangle',
+              'data_legend' => 'hover_right'
+            ]) ?>
+          <?php endif ?>
         </td>
         <td>
           <?php if ($types[$publication['klr_tow']]['super_type_code'] == 'sup'): ?>

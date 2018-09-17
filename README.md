@@ -13,6 +13,10 @@ implemented by [Wendig OÜ](https://wendig.io).
 
 Have a look at [some screenshots](https://github.com/wendig-ou/ldb/wiki)!
 
+Note: The application can be configured to use [Dimension Badges](
+https://www.dimensions.ai/). The service is subject to conditions and requires
+registration. Make sure to ensure compliance before using this feature.
+
 ## Development setup
 
 * install VirtualBox (https://www.virtualbox.org/)
