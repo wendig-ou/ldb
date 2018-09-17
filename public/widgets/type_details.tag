@@ -3,8 +3,8 @@
     if={active()}
     class="alert alert-info"
   >
-    <strong>Heads up!</strong><br />
-    {text()}
+    <strong>Heads up!</strong><br /><br />
+    <div ref="text"></div>
   </div>
 
   <script type="text/javascript">
@@ -15,16 +15,20 @@
       handler();
     });
 
+    tag.on('updated', function() {
+      $(tag.refs.text).html(tag.text());
+    })
+
     tag.active = function() {
       return anySelected() && tag.text() != undefined;
     }
 
     tag.text = function() {
       return {
-        '04.01': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie lacus sed lectus eleifend, vitae elementum metus commodo.',
-        '04.02': 'Ut fermentum elit euismod, scelerisque mauris vel, semper lorem. Nunc sollicitudin mauris urna, at ultricies augue aliquam eu.',
-        '04.03': 'Cras faucibus sed lacus vitae bibendum. Vivamus pulvinar tincidunt nibh eget eleifend. Interdum et malesuada fames ac ante ipsum primis in faucibus.',
-        '04.04': 'Vivamus iaculis vestibulum efficitur. Nam cursus auctor risus eget viverra. Cras dignissim venenatis turpis. Praesent quis cursus nunc.'
+        '04.01': 'Habilitations by IGB scientists are <strong>registered by the habilitated person</strong>. Since supervision in this career stage is more a mentoring than an academic supervision, supervisors are not registered here.',
+        '04.02': '<p>Doctoral degrees are counted if candidates have conducted their research at IGB for <strong>at least 6 months with an IGB contract</strong>. An IGB researcher must be the main supervisor for a substantial part of the thesis (1 of 3 publications or equivalent).<br /><i>exception</i>: If candidates conduct their practical research at another location <strong>and do not have an academic supervisor there</strong>. An IGB researcher must be the main supervisor / PI of the entire doctoral research project.</p><p> The main supervisor is always listed first (order adjustable in the input field), co-supervisors are also reported. If main supervisor is not from IGB, co-supervisors enter the information.<br />Please include de facto supervising postdoctoral IGB scientists in the supervisor list regardless of their official status.<br /> Not registered are doctoral degrees for which IGB scientists only formally act as supervisor for university purposes because they are professors or such. Also not sufficient is the mere presence on the reviewing or defence board.</p>',
+        '04.03': '<p>Supervisions of Master or Diploma degrees are only registered if the <strong>main supervisor</strong> (development of topic, supervision of most important steps) is an IGB scientist or if the <strong>supervision contribution</strong> by an IGB scientist was so substantial and extensive that the research would have been impossible without this contribution.</p><p> The main supervisor is always listed first (order adjustable in the input field), co-supervisors are also reported. If main supervisor is not from IGB, co-supervisors enter the information.<br /> Please include de facto supervising doctoral or postdoctoral IGB scientists in the adviser list regardless of their official status.<br /> Not registered are academic degrees for which IGB scientists only formally act as supervisor for university purposes because of their status as professors or such. Also not sufficient is the mere function as an examiner.</p>',
+        '04.04': '<p>Supervisions of Bachelor degrees are only registered if the <strong>main supervisor</strong> (development of topic, supervision of most important steps) is an IGB scientist or if the <strong>supervision contribution</strong> by an IGB scientist was so substantial and extensive that the research would have been impossible without this contribution.</p><p> The main supervisor is always listed first (order adjustable in the input field), co-supervisors are also reported. If main supervisor is not from IGB, co-supervisors enter the information.<br /> Please include de facto supervising doctoral or postdoctoral IGB scientists in the adviser list regardless of their official status.<br /> Not registered are academic degrees for which IGB scientists only formally act as supervisor for university purposes because of their status as professors or such. Also not sufficient is the mere function as an examiner.</p>'
       }[tag.type];
     }
 
