@@ -83,7 +83,7 @@
         }
       }
 
-      error_log(print_r($records, TRUE));
+      // error_log(print_r($records, TRUE));
 
       return $records;
     }

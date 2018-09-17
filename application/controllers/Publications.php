@@ -539,10 +539,10 @@
     }
 
     public function supervision_unique($value, $authors) {
-      error_log('----');
-      error_log($value);
-      error_log(print_r($this->data, TRUE));
-      error_log('----');
+      // error_log('----');
+      // error_log($value);
+      // error_log(print_r($this->data, TRUE));
+      // error_log('----');
 
       return FALSE;
     }

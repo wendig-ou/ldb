@@ -113,7 +113,7 @@
       }
 
       // error_log(print_r($options, TRUE));
-      error_log($query->get_compiled_select(NULL, FALSE));
+      // error_log($query->get_compiled_select(NULL, FALSE));
 
       return $query;
     }
