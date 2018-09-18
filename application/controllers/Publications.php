@@ -326,11 +326,11 @@
             'label' => 'lang:igb_field_'.$code.'_edate',
             'rules' => 'required'
           ]);
-          // array_push($rules, [
-          //   'field' => 'edate',
-          //   'label' => 'lang:igb_field_'.$code.'_edate',
-          //   'rules' => 'callback_supervision_unique[people]'
-          // ]);
+          array_push($rules, [
+            'field' => 'people',
+            'label' => 'lang:igb_field_'.$code.'_edate',
+            'rules' => 'callback_supervision_unique'
+          ]);
         }
 
         if ($code == 'media') {
@@ -538,13 +538,21 @@
       return TRUE;
     }
 
-    public function supervision_unique($value, $authors) {
-      // error_log('----');
-      // error_log($value);
-      // error_log(print_r($this->data, TRUE));
-      // error_log('----');
+    public function supervision_unique($people) {
+      $people = json_decode($people);
+      
+      if (isset($this->data[$this->resource]['klr_tow']) && sizeof($people) > 0) {
+        $candidates = $this->model->get_all(1, 1, [
+          'tow' => $this->data[$this->resource]['klr_tow'],
+          'person_id' => $people[0][1]
+        ]);
 
-      return FALSE;
+        if (sizeof($candidates) > 0) {
+          return FALSE;
+        }
+      }
+
+      return TRUE;
     }
   }
 ?>

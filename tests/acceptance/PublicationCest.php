@@ -140,7 +140,6 @@ class PublicationCest
         $I->selectOption('input[name=klr_tow]', '01.01');
         $I->fillField('Citation', 'some citation');
         $I->fillField('DOI', '10.1056/NEJM199710303371801');
-        $I->fillField('Publisher', 'Springer');
         $I->fillField('Impact factor', '3.1415');
 
         $I->click('save');
@@ -149,7 +148,6 @@ class PublicationCest
         $I->see('You have to associate at least one person with any work record');
         $I->seeInField('Citation', 'some citation');
         $I->seeInField('DOI', '10.1056/NEJM199710303371801');
-        $I->seeInField('Publisher', 'Springer');
         $I->seeInField('Impact factor', '3.1415');
     }
 
@@ -204,12 +202,13 @@ class PublicationCest
         $I->see('Doe, John', 'table');
 
         # Try to create a duplicate
-        // $I->click('create new work record');
-        // $I->click("[data-code='sup'] a");
-        // $I->add_person('Doe, John');
-        // $I->fillField('Date of defense', '20170421');
-        // $I->click('save');
-        // $I->see('a supervision entry with this date of defense and these exact author(s) already exists');
+        $I->click('create new work record');
+        $I->click("[data-code='sup'] a");
+        $I->fillField('Title of thesis', 'Polar Bear Analysis');
+        $I->add_person('Doe, John');
+        $I->fillField('Date of defense', '20170421');
+        $I->click('save');
+        $I->see('a supervision entry with this date of defense and these exact author(s) already exists');
     }
 
     public function createSupervisionAndCreateInstitutionOnTheFly(AcceptanceTester $I)
@@ -434,7 +433,6 @@ class PublicationCest
         $I->fillField('Citation', 'some citation');
         $I->fillField('periodical-selector input[name=periodical_name]', 'Sunflower Revue');
         $I->fillField('DOI', '10.1056/NEJM199710303371801');
-        $I->fillField('Publisher', 'some publisher');
         $I->fillField('Impact factor', '3.2');
         $I->add_person('Doe, John');
 
