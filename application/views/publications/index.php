@@ -257,9 +257,13 @@
           <?php endif; ?>
 
           <?php if ($types[$publication['klr_tow']]['super_type_code'] == 'rev'): ?>
-            <a
-              href="/publications/edit/<?= $publication['pid'] ?>"
-            >Reviews (aggregated)</a>
+            <?php if (can_edit($current_user, $publication)): ?>
+              <a href="/publications/edit/<?= $publication['pid'] ?>">
+                Reviews (aggregated)
+              </a>
+            <?php else: ?>
+              Reviews (aggregated)
+            <?php endif; ?>
           <?php endif; ?>
 
           <?php if ($publication['klr_tow'] == '01.01'): ?>
