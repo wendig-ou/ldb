@@ -48,14 +48,20 @@
         var tows = tag.opts.tow.split(/\s*,\s*/);
         for (var i = 0; i < tows.length; i++) {
           if (tows[i] == igb.currentType) {
-            return true
+            return true;
           }
         }
         return false;
       }
 
       if (tag.opts.except) {
-        return igb.currentType != tag.opts.except;
+        var tows = tag.opts.except.split(/\s*,\s*/);
+        for (var i = 0; i < tows.length; i++) {
+          if (tows[i] == igb.currentType) {
+            return false;
+          }
+        }
+        return true;
       }
     }
     

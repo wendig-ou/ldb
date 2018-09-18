@@ -26,6 +26,13 @@
       'label' => 'igb_field_open_access', 
       'value' => $publication['open_access']
     ]); ?>
+
+    <if-type tow="01.01, 01.02">
+      <?= check_box('green_open_access', [
+        'label' => 'igb_field_pub_green_open_access',
+        'value' => $publication['green_open_access'],
+      ]); ?>
+    </if-type>
   </div>
   <div class="col-md-6">
     <?= text_area('title', [
@@ -55,11 +62,13 @@
         'value' => $publication['doi']
       ]); ?>
 
-      <!-- semantics: publisher -->
-      <?= text_field('organization', [
-        'label' => 'igb_field_pub_organization',
-        'value' => $publication['organization']
-      ]); ?>
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+        <!-- semantics: publisher -->
+        <?= text_field('organization', [
+          'label' => 'igb_field_pub_organization',
+          'value' => $publication['organization']
+        ]); ?>
+      </if-type>
     </if-type>
 
     <if-type category="article-special">
@@ -84,11 +93,13 @@
         'value' => $publication['doi']
       ]); ?>
 
-      <!-- semantics: publisher -->
-      <?= text_field('organization', [
-        'label' => 'igb_field_pub_organization',
-        'value' => $publication['organization']
-      ]); ?>
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+        <!-- semantics: publisher -->
+        <?= text_field('organization', [
+          'label' => 'igb_field_pub_organization',
+          'value' => $publication['organization']
+        ]); ?>
+      </if-type>
 
       <?= text_field('impactf', [
         'label' => 'igb_field_pub_impactf',
@@ -113,11 +124,13 @@
         'value' => $publication['doi']
       ]); ?>
 
-      <!-- semantics: publisher -->
-      <?= text_field('organization', [
-        'label' => 'igb_field_pub_organization',
-        'value' => $publication['organization']
-      ]); ?>
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+        <!-- semantics: publisher -->
+        <?= text_field('organization', [
+          'label' => 'igb_field_pub_organization',
+          'value' => $publication['organization']
+        ]); ?>
+      </if-type>
     </if-type>
 
     <if-type category="independent">
@@ -159,11 +172,13 @@
         'value' => $publication['place']
       ]); ?>
 
-      <!-- semantics: publisher -->
-      <?= text_field('organization', [
-        'label' => 'igb_field_pub_organization',
-        'value' => $publication['organization']
-      ]); ?>
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+        <!-- semantics: publisher -->
+        <?= text_field('organization', [
+          'label' => 'igb_field_pub_organization',
+          'value' => $publication['organization']
+        ]); ?>
+      </if-type>
 
       <?= text_field('impactf', [
         'label' => 'igb_field_pub_impactf',
@@ -171,18 +186,17 @@
       ]); ?>
     </if-type>
 
-    <?= text_field('editors', [
-      'label' => 'igb_field_pub_editors',
-      'value' => $publication['editors']
-    ]); ?>
+    <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+      <?= text_field('editors', [
+        'label' => 'igb_field_pub_editors',
+        'value' => $publication['editors']
+      ]); ?>
+    </if-type>
 
     <if-type tow="01.01, 01.02">
       <hr />
 
-      <?= check_box('green_open_access', [
-        'label' => 'igb_field_pub_green_open_access',
-        'value' => $publication['green_open_access'],
-      ]); ?>
+      <strong><?= ucfirst(lang('igb_green_open_access')); ?></strong>
 
       <?= text_field('link', [
         'label' => 'igb_field_pub_link',
