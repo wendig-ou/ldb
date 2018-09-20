@@ -55,7 +55,7 @@
   $lang['igb_notice_is_periodical_autocomplete_title'] = 'attention!';
   $lang['igb_notice_is_periodical_autocomplete_content'] = 'If the entry you are looking for is not in the list, please add it yourself by typing its name';
   $lang['igb_notice_is_people_autocomplete_title'] = 'Looking for someone?';
-  $lang['igb_notice_is_people_autocomplete_content'] = 'Type in at least three letters of the name to get suggestions. If the person you are looking for is not in the list, please add the name yourself following this pattern: Surname, first name - e. g. Miller, Paula. To flag a person as "IGB affiliated" click on the icon "IGB".';
+  $lang['igb_notice_is_people_autocomplete_content'] = 'Type in at least three letters of the name to get suggestions. If the person you are looking for is not in the list, please add the name yourself following this pattern: Surname, first name - e. g. Miller, Paula. To flag a person as "IGB affiliated" set the icon "is IGB".';
   $lang['igb_notice_is_institution_autocomplete_title'] = 'Wait, the location might already be in the list!';
   $lang['igb_notice_is_institution_autocomplete_content'] = 'Type in at least three letters to get suggestions for a location. If the location you are looking for is not in the list, please add the name yourself by typing its name';
   $lang['igb_error_permission_denied'] = 'permission denied';
