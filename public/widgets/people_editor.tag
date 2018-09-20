@@ -10,8 +10,7 @@
       placeholder={t('igb_prompt_start_typing')}
       ref="input"
       data-placement="left"
-      data-title={t('igb_notice_is_people_autocomplete_title', true)}
-      data-content={t('igb_notice_is_people_autocomplete_content', true)}
+      data-content={t(opts.acContent || 'igb_notice_is_people_autocomplete_content', true)}
       data-trigger="focus"
     />
     <div show={data.length > 0}>
@@ -42,6 +41,12 @@
     tag.people = {};
 
     tag.on('mount', function() {
+      var tKey = tag.opts.acContent || 'igb_notice_is_people_autocomplete_content';
+      $(tag.refs.input).attr('data-html', tag.t(tKey, true));
+
+      tKey = tag.opts.acTitle || 'igb_notice_is_people_autocomplete_title';
+      $(tag.refs.input).attr('data-title', tag.t(tKey, true));
+
       $(tag.refs.input).popover();
 
       parseExisting();

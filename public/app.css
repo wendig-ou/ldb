@@ -305,8 +305,12 @@ file-select-feedback {
 
 type-details {
   display: block;
-  margin-top: 39px;
+  margin-top: 37px;
   min-height: 100%;
+}
+
+type-details div.alert {
+  font-size: 1em;
 }
 
 type-details .alert {

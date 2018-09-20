@@ -77,6 +77,8 @@
         label="<?= ucfirst(lang('igb_field_sup_supervisors')) ?>"
         name="supervisors"
         value="<?= html_escape($supervisors) ?>"
+        ac-title="igb_notice_is_supervisor_autocomplete_title"
+        ac-content="igb_notice_is_supervisor_autocomplete_content"
       ></people-editor>
     </if-type>
 

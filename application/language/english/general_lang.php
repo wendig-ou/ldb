@@ -56,8 +56,10 @@
   $lang['igb_notice_is_periodical_autocomplete_content'] = 'If the entry you are looking for is not in the list, please add it yourself by typing its name';
   $lang['igb_notice_is_people_autocomplete_title'] = 'Looking for someone?';
   $lang['igb_notice_is_people_autocomplete_content'] = 'Type in at least three letters of the name to get suggestions. If the person you are looking for is not in the list, please add the name yourself following this pattern: Surname, first name - e. g. Miller, Paula. To flag a person as "IGB affiliated" set the icon "is IGB".';
-  $lang['igb_notice_is_institution_autocomplete_title'] = 'Wait, the location might already be in the list!';
-  $lang['igb_notice_is_institution_autocomplete_content'] = 'Type in at least three letters to get suggestions for a location. If the location you are looking for is not in the list, please add the name yourself by typing its name';
+  $lang['igb_notice_is_supervisor_autocomplete_title'] = 'Supervisors';
+  $lang['igb_notice_is_supervisor_autocomplete_content'] = 'The main supervisor is always listed first (order adjustable in the input field), co-supervisors are also reported. If main supervisor is not from IGB, co-supervisors enter the information.<br /> Please include <i>de facto</i> supervising doctoral or postdoctoral IGB scientists in the adviser list regardless of their official status.';
+  $lang['igb_notice_is_institution_autocomplete_title'] = 'Wait, the university might already be in the list!';
+  $lang['igb_notice_is_institution_autocomplete_content'] = 'Type in at least three letters to get suggestions for a university. If the universty you are looking for is not in the list, please add the name yourself by typing its name';
   $lang['igb_error_permission_denied'] = 'permission denied';
   $lang['igb_error_not_found'] = 'the record you are trying to access does not exist';
   $lang['igb_error_heading'] = 'error!';
@@ -144,7 +146,7 @@
   $lang['igb_field_lec_people'] = 'lecturer(s)';
   $lang['igb_field_lec_notes'] = 'optional: additional information about lecture or course';
   $lang['igb_help_lec_notes'] = 'e. g. Blockseminar, Vorlesung, Feldpraktikum';
-  $lang['igb_field_lec_institution_id'] = 'location';
+  $lang['igb_field_lec_institution_id'] = 'university';
   $lang['igb_help_lec_institution_id'] = 'e. g. Berlin';
   $lang['igb_field_lec_edate'] = 'optional: start date';
   $lang['igb_field_lec_end_date'] = 'optional: end date';
@@ -184,7 +186,7 @@
   $lang['igb_field_sup_title'] = 'title of thesis';
   $lang['igb_field_sup_notes'] = 'additional information';
   $lang['igb_field_sup_edate'] = 'date of defense';
-  $lang['igb_field_sup_institution_id'] = 'location';
+  $lang['igb_field_sup_institution_id'] = 'university';
   $lang['igb_field_sup_faculty'] = 'faculty';
 
   $lang['igb_field_pub_green_open_access'] = 'LeibnizOpen';
