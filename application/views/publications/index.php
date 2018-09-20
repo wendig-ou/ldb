@@ -170,9 +170,9 @@
                     width="8px"
                   />
                 <?php endif ?>
-                <?php if ($publication['green_open_access']): ?>
+                <?php if ($publication['link']): ?>
                   <img
-                    title="<?= lang('igb_field_pub_green_open_access') ?>"
+                    title="<?= lang('igb_field_pub_link') ?>"
                     src="/images/goa.png"
                     width="8px"
                   />

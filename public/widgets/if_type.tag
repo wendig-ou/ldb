@@ -11,6 +11,7 @@
       '01.02': 'article',
       '01.10': 'article',
       '01.15': 'article',
+      '01.16': 'article',
       '01.05': 'book_part',
       '01.11': 'book_part',
       '01.07': 'boot_part',

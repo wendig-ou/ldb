@@ -62,7 +62,7 @@
         'value' => $publication['doi']
       ]); ?>
 
-      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15, 01.16">
         <!-- semantics: publisher -->
         <?= text_field('organization', [
           'label' => 'igb_field_pub_organization',
@@ -93,7 +93,7 @@
         'value' => $publication['doi']
       ]); ?>
 
-      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15, 01.16">
         <!-- semantics: publisher -->
         <?= text_field('organization', [
           'label' => 'igb_field_pub_organization',
@@ -124,7 +124,7 @@
         'value' => $publication['doi']
       ]); ?>
 
-      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15, 01.16">
         <!-- semantics: publisher -->
         <?= text_field('organization', [
           'label' => 'igb_field_pub_organization',
@@ -172,7 +172,7 @@
         'value' => $publication['place']
       ]); ?>
 
-      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+      <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15, 01.16">
         <!-- semantics: publisher -->
         <?= text_field('organization', [
           'label' => 'igb_field_pub_organization',
@@ -186,7 +186,7 @@
       ]); ?>
     </if-type>
 
-    <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15">
+    <if-type except="01.01, 01.02, 01.05, 01.10, 01.11, 01.15, 01.16">
       <?= text_field('editors', [
         'label' => 'igb_field_pub_editors',
         'value' => $publication['editors']

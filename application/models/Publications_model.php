@@ -65,6 +65,10 @@
         );
       }
 
+      if (isset($options['edate']) && $options['edate']) {
+        $query = $query->where('edate', $this->human_to_date($options['edate']));
+      }
+
       if (isset($options['people']) && $options['people']) {
         $people = $this->db->escape_like_str($options['people']);
         $query = $query
