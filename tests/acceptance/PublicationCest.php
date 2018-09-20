@@ -208,7 +208,7 @@ class PublicationCest
         $I->add_person('Doe, John');
         $I->fillField('Date of defense', '20170421');
         $I->click('save');
-        $I->see('a supervision entry with this date of defense and these exact author(s) already exists');
+        $I->see('a supervision entry of this type and with the exact author already exists');
     }
 
     public function createSupervisionAndCreateInstitutionOnTheFly(AcceptanceTester $I)

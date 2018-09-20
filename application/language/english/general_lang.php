@@ -225,7 +225,7 @@
   $lang['form_validation_can_verify'] = "Field {field}: You don't have sufficient permissions to verify records";
   $lang['form_validation_people_required'] = 'You have to associate at least one person with any work record';
   $lang['form_validation_people_format'] = 'Please make sure to enter new people in the format "Lastname, Firstname"';
-  $lang['form_validation_supervision_unique'] = "a supervision entry with this date of defense and these exact author(s) already exists";
+  $lang['form_validation_supervision_unique'] = "a supervision entry of this type and with the exact author already exists";
 
   $lang['igb_publications'] = 'work records';
   $lang['igb_publication'] = 'work record';
