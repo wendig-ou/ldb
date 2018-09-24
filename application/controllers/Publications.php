@@ -549,9 +549,14 @@
           'person_id' => $people[0][1]
         ]);
 
-        if (sizeof($candidates) > 0) {
-          return FALSE;
+        if (sizeof($candidates) == 0) return TRUE;
+        if (sizeof($candidates) == 1) {
+          if (isset($this->data['id']) && $this->data['id']) {
+            return $candidates[0]['pid'] == $this->data['id'];
+          }
         }
+
+        return FALSE;
       }
 
       return TRUE;
