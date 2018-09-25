@@ -540,12 +540,12 @@
 
     public function supervision_unique($people) {
       $people = json_decode($people);
-      error_log(print_r($this->data[$this->resource], TRUE));
+      $attribs = $this->attribs();
       
-      if (isset($this->data[$this->resource]['klr_tow']) && sizeof($people) > 0) {
+      if (isset($attribs['klr_tow']) && sizeof($people) > 0) {
         $candidates = $this->model->get_all(1, 1, [
-          'edate' => $this->data[$this->resource]['edate'],
-          'tow' => $this->data[$this->resource]['klr_tow'],
+          'edate' => $attribs['edate'],
+          'tow' => $attribs['klr_tow'],
           'person_id' => $people[0][1]
         ]);
 
