@@ -273,14 +273,15 @@
             </div>
           <?php endif; ?>
 
-          <? if (getenv('LDB_USE_ALTMETRIC_BADGES') == 'true'): ?>
-            <?= dimension_badge($publication['doi']) ?>
-          <? endif ?>
           <?php if (getenv('LDB_USE_DIMENSION_BADGES') == 'true'): ?>
             <?= dimension_badge($publication['doi'], [
               'style' => 'small_rectangle',
               'data_legend' => 'hover_right'
             ]) ?>
+          <?php endif ?>
+
+          <?php if (getenv('LDB_USE_ALTMETRIC_BADGES') == 'true'): ?>
+            <?= altmetric_badge($publication['doi']) ?>
           <?php endif ?>
         </td>
         <td>
