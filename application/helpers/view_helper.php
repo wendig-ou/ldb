@@ -353,4 +353,17 @@
     }
   }
 
+  if (!function_exists('altmetric_badge')) {
+    function altmetric_badge($doi, $options = []) {
+      $defaults = [
+        'doi' => $doi
+      ];
+      $options = array_merge($defaults, $options);
+
+      if ($doi) {
+        return get_instance()->load->view('partials/altmetric_badge', $options, TRUE);
+      }
+    }
+  }
+
 ?>

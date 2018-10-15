@@ -1,0 +1,1 @@
+<div class="altmetric-embed" data-doi="<?= $doi ?>"></div>

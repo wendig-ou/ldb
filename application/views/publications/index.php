@@ -273,6 +273,9 @@
             </div>
           <?php endif; ?>
 
+          <? if (getenv('LDB_USE_ALTMETRIC_BADGES') == 'true'): ?>
+            <?= dimension_badge($publication['doi']) ?>
+          <? endif ?>
           <?php if (getenv('LDB_USE_DIMENSION_BADGES') == 'true'): ?>
             <?= dimension_badge($publication['doi'], [
               'style' => 'small_rectangle',

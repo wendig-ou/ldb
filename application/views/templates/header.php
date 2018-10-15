@@ -11,7 +11,12 @@
     <script type="text/javascript" src="/jquery.min.js"></script>
     <script type="text/javascript" src="/jquery-ui.min.js"></script>
     <script type="text/javascript" src="/bootstrap.min.js"></script>
-    <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+    <? if (getenv('LDB_USE_DIMENSION_BADGES') == 'true'): ?>
+        <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+    <? endif ?>
+    <? if (getenv('LDB_USE_ALTMETRIC_BADGES') == 'true'): ?>
+        <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+    <? endif ?>
     <script type="text/javascript" src="/riot+compiler.min.js"></script>
 
     <script type="riot/tag" data-src="/widgets/igb.tag"></script>
