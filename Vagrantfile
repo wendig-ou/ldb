@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vagrant.plugins = ['vagrant-vbguest']
-  config.vm.box = "bento/ubuntu-16.04"
+  config.vm.box = "bento/ubuntu-20.04"
 
   config.vm.define "dev", :primary => true do |c|
     if RUBY_PLATFORM.match(/darwin/)
@@ -19,5 +19,4 @@ Vagrant.configure("2") do |config|
 
     c.vm.provision :shell, path: 'provision.sh', args: 'base'
   end
-
 end
