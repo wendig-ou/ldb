@@ -1,5 +1,3 @@
-<type-notifier selector="input[name=klr_tow]"></type-notifier>
-
 <hr />
 
 <div class="row">

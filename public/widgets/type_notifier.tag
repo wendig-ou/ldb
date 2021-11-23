@@ -1,5 +1,4 @@
 <type-notifier>
-
   <yield />
 
   <script type="text/javascript">
@@ -21,5 +20,4 @@
       window.igb.bus.trigger('type-selected', value())
     }
   </script>
-
 </type-notifier>

@@ -5,8 +5,14 @@
     </label>
     <span class="ldb-required">*</span>
   <?php endif; ?>
-  
+
   <?php foreach ($types as $type): ?>
+    <?php if (in_array($type['tow'], ['09.10', '09.11', '09.12', '09.13', '09.14', '09.15', '09.16'])) {
+      if (!has_role(['library', 'admin'])) {
+        continue;
+      }
+    } ?>
+
     <div class="radio">
       <label>
         <input

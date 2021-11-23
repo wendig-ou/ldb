@@ -21,7 +21,6 @@
 
   </div>
   <div class="col-md-6">
-
     <?= text_area('title', [
       'label' => 'igb_field_pres_title', 
       'help' => 'igb_help_pres_title',

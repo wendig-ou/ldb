@@ -1,5 +1,12 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-links" aria-expanded="false">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
     <div class="navbar-header">
       <a class="navbar-brand" href="/">
         <?= getenv('LDB_APP_NAME') ?>
@@ -45,7 +52,7 @@
         <?php endif; ?>
       </ul>
 
-      <p class="navbar-text navbar-right">
+      <p class="navbar-text navbar-right text-right">
         <?php if ($current_user): ?>
           <?= $this->lang->line('igb_signed_in_as') ?>
           <strong><?= $current_user['uname'] ?></strong>

@@ -5,7 +5,7 @@
 <div class="row igb-grid">
   <?php foreach ($super_types as $super_type): ?>
     <div
-      class="<?= (strlen($super_type['description']) > 200 ? 'col-md-8' : 'col-md-4') ?>"
+      class="col-md-4"
       data-code="<?= $super_type['code'] ?>"
     >
       <a

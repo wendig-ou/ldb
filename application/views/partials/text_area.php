@@ -2,6 +2,7 @@
   <?php if ($label): ?>
     <label class="form-label" for="<?= 'field_'.$name ?>">
       <?= ucfirst($label) ?>
+      <?php $this->load->view('partials/field_name', ['name' => $name]) ?>
     </label>
   <?php endif ?>
   <span class="ldb-required"><?= ($required ? '*' : '') ?></span>

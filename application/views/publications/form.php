@@ -23,7 +23,7 @@
         <?php endif ?>
       </h1>
 
-      <?php if ($super_type_id && $super_type['help']): ?>
+      <?php if ($super_type_id && $super_type['description']): ?>
         <div class="panel panel-default text-muted ldb-help">
           <div class="panel-body">
             <i class="glyphicon glyphicon-info-sign"></i>
@@ -31,7 +31,7 @@
               <?= ucfirst($super_type['name']) ?>
             </strong>
             <p>
-              <?= $super_type['help'] ?>
+              <?= $super_type['description'] ?>
             </p>
           </div>
         </div>
@@ -55,3 +55,5 @@
     </form>
   </div>
 </div>
+
+<type-notifier selector="input[name=klr_tow]"></type-notifier>

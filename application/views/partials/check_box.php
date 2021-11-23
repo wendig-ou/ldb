@@ -8,5 +8,6 @@
       <?= set_checkbox($name, '1', !!$value) ?>
     />
     <?= ucfirst($label) ?>
+    <?php $this->load->view('partials/field_name', ['name' => $name]) ?>
   </label>
 </div>

@@ -1,6 +1,7 @@
 <div class="form-group">
   <label class="form-label" for="<?= 'field_'.$name ?>">
     <?= ucfirst($label) ?>
+    <?php $this->load->view('partials/field_name', ['name' => $name]) ?>
   </label>
   <span class="ldb-required"><?= ($required ? '*' : '&nbsp;') ?></span>
   <date-picker
