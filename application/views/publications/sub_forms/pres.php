@@ -21,19 +21,47 @@
 
   </div>
   <div class="col-md-6">
-    <?= text_area('title', [
-      'label' => 'igb_field_pres_title', 
-      'help' => 'igb_help_pres_title',
-      'value' => $publication['title'],
-      'required' => TRUE
-    ]); ?>
+    <if-type except="03.06">
+      <?= text_area('title', [
+        'label' => 'igb_field_pres_title', 
+        'help' => 'igb_help_pres_title',
+        'value' => $publication['title'],
+        'required' => TRUE
+      ]); ?>
 
-    <?= text_area('notes', [
-      'label' => 'igb_field_pres_notes',
-      'help' => 'igb_help_pres_notes',
-      'value' => $publication['notes'],
-      'required' => TRUE
-    ]); ?>
+      <?= text_area('notes', [
+        'label' => 'igb_field_pres_notes',
+        'help' => 'igb_help_pres_notes',
+        'value' => $publication['notes'],
+        'required' => TRUE
+      ]); ?>
+
+      <?= text_area('abstract', [
+        'label' => 'igb_field_pres_abstract',
+        'value' => $publication['abstract'],
+      ]); ?>
+    </if-type>
+
+    <if-type tow="03.06">
+      <?= text_area('title', [
+        'label' => 'igb_field_pres_topic', 
+        'value' => $publication['title'],
+        'required' => TRUE
+      ]); ?>
+
+      <?= text_area('notes', [
+        'label' => 'igb_field_pres_event',
+        'value' => $publication['notes'],
+        'required' => TRUE
+      ]); ?>
+    </if-type>
+
+    <if-type tow="03.07, 03.08">
+      <?= text_area('impactf', [
+        'label' => 'igb_field_pres_impactf',
+        'value' => $publication['impactf'],
+      ]); ?>
+    </if-type>
 
     <?= text_field('place', [
       'label' => 'igb_field_pres_place',
@@ -41,6 +69,35 @@
       'value' => $publication['place'],
       'required' => TRUE
     ]); ?>
+
+    <if-type except="03.06">
+      <?= text_field('participation_category', [
+        'label' => 'igb_field_pres_participation_category',
+        'value' => $publication['participation_category']
+      ]); ?>
+
+      <?= text_field('target_group', [
+        'label' => 'igb_field_pres_target_group',
+        'value' => $publication['target_group']
+      ]); ?>
+    </if-type>
+
+    <?= text_field('duration', [
+      'label' => 'igb_field_pres_duration',
+      'value' => $publication['duration']
+    ]); ?>
+
+    <if-type tow="03.04, 03.07, 03.08">
+      <?= text_field('contribution_category', [
+        'label' => 'igb_field_pres_contribution_category',
+        'value' => $publication['contribution_category']
+      ]); ?>
+      
+      <?= text_field('event_category', [
+        'label' => 'igb_field_pres_event_category',
+        'value' => $publication['event_category']
+      ]); ?>
+    </if-type>
 
     <div class="row">
       <div class="col-md-6">
@@ -71,7 +128,8 @@
     <?php if (has_role(['admin', 'library'])): ?>
       <?= text_area('authors', [
         'label' => 'igb_legacy_people',
-        'value' => $publication['authors']
+        'value' => $publication['authors'],
+        'disabled' => TRUE
       ]); ?>
     <?php else: ?>
       <?php if (isset($publication['authors']) && $publication['authors'] != ''): ?>

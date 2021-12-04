@@ -31,11 +31,38 @@
       'required' => TRUE
     ]); ?>
 
+    <?= text_field('notes', [
+      'label' => 'igb_field_conf_notes',
+      'value' => $publication['notes']
+    ]); ?>
+
+    <?= text_field('abstract', [
+      'label' => 'igb_field_conf_abstract',
+      'value' => $publication['abstract']
+    ]); ?>
+
+    <if-type except="07.01">
+      <?= text_field('impactf', [
+        'label' => 'igb_field_conf_impactf',
+        'value' => $publication['impactf']
+      ]); ?>
+    </if-type>
+
     <?= text_field('place', [
       'label' => 'igb_field_conf_place',
       'help' => 'igb_help_conf_place',
       'value' => $publication['place'],
       'required' => TRUE
+    ]); ?>
+
+    <?= text_field('target_group', [
+      'label' => 'igb_field_conf_target_group',
+      'value' => $publication['target_group']
+    ]); ?>
+
+    <?= text_field('duration', [
+      'label' => 'igb_field_conf_duration',
+      'value' => $publication['duration']
     ]); ?>
 
     <div class="row">
@@ -81,7 +108,8 @@
     <?php if (has_role(['admin', 'library'])): ?>
       <?= text_area('authors', [
         'label' => 'igb_legacy_people',
-        'value' => $publication['authors']
+        'value' => $publication['authors'],
+        'disabled' => TRUE
       ]); ?>
     <?php else: ?>
       <?php if (isset($publication['authors']) && $publication['authors'] != ''): ?>

@@ -3,6 +3,41 @@
     public function up() {
       echo get_class($this) . "\n";
 
+      $this->dbforge->add_column('publications', [
+        'participation_category' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'target_group' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'duration' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'contribution_category' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'event_category' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'language' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'publication_category' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ],
+        'dotation' => [
+          'type' => 'varchar',
+          'constraint' => 255
+        ]
+      ]);
+
       $this->db->
         set('name', 'presentations and participation in panels')->
         set('description', 'Scientific keynote, plenary or invited talk (incl. moderation and podium discussion); lecture, panel participation and other contribution to a scientific, public or stakeholder event.')->
@@ -95,15 +130,16 @@
         set('t_desc', 'scientific conference or event')->
         where('tow', '07.01')->
         update('ToW');
-      $this->db->
-        set('super_type_id', $id)->
-        set('t_desc', 'official stakeholder event')->
-        where('tow', '07.04')->
-        update('ToW');
       $this->db->insert('ToW', [
         'super_type_id' => $id,
         'tow' => '07.03',
         't_desc' => 'official public outreach event',
+        'active' => 1
+      ]);
+      $this->db->insert('ToW', [
+        'super_type_id' => $id,
+        'tow' => '07.04',
+        't_desc' => 'official stakeholder event',
         'active' => 1
       ]);
 
@@ -177,6 +213,12 @@
         'super_type_id' => $id,
         'tow' => '10.04',
         't_desc' => 'commissioned expert report or position paper',
+        'active' => 1
+      ]);
+      $this->db->insert('ToW', [
+        'super_type_id' => $id,
+        'tow' => '10.05',
+        't_desc' => 'standardization',
         'active' => 1
       ]);
       $this->db->insert('ToW', [

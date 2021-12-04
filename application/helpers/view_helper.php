@@ -166,7 +166,8 @@
         'help' => FALSE,
         'required' => FALSE,
         'value' => FALSE,
-        'autofocus' => FALSE
+        'autofocus' => FALSE,
+        'disabled' => FALSE
       ];
       $options = array_merge($defaults, $options);
 

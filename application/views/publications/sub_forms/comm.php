@@ -60,7 +60,8 @@
     <?php if (has_role(['admin', 'library'])): ?>
       <?= text_area('authors', [
         'label' => 'igb_legacy_people',
-        'value' => $publication['authors']
+        'value' => $publication['authors'],
+        'disabled' => TRUE
       ]); ?>
     <?php else: ?>
       <?php if (isset($publication['authors']) && $publication['authors'] != ''): ?>

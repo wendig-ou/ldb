@@ -20,38 +20,50 @@
   </div>
 
   <div class="col-md-6">
-    <?= text_field('num_comm_reports', [
-      'label' => 'igb_field_rev_num_comm_reports',
-      'type' => 'number',
-      'value' => $publication['num_comm_reports'],
-      'autofocus' => TRUE
+    <?= text_area('title', [
+      'label' => 'igb_field_title',
+      'value' => $publication['title'],
     ]); ?>
 
-    <?= text_field('num_position_papers', [
-      'label' => 'igb_field_rev_num_position_papers',
-      'type' => 'number',
-      'value' => $publication['num_position_papers'],
-      'autofocus' => TRUE
+    <?= text_field('organization', [
+      'label' => 'igb_field_award_organization',
+      'value' => $publication['organization']
     ]); ?>
 
-    <?= text_field('num_reviews', [
-      'label' => 'igb_field_rev_num_reviews',
-      'type' => 'number',
-      'value' => $publication['num_reviews'],
-      'autofocus' => TRUE
+    <?= text_field('notes', [
+      'label' => 'igb_field_award_notes',
+      'value' => $publication['notes']
     ]); ?>
 
-    <?= text_field('num_reviews_eu', [
-      'label' => 'igb_field_rev_num_reviews_eu',
-      'type' => 'number',
-      'value' => $publication['num_reviews_eu'],
-      'autofocus' => TRUE
+    <?= text_field('contribution_category', [
+      'label' => 'igb_field_award_contribution_category',
+      'value' => $publication['contribution_category']
     ]); ?>
+
+    <?= text_field('dotation', [
+      'label' => 'igb_field_award_dotation',
+      'value' => $publication['dotation']
+    ]); ?>
+
+    <?= text_field('editors', [
+      'label' => 'igb_field_award_editors',
+      'value' => $publication['editors']
+    ]); ?>
+
+    <div class="row">
+      <div class="col-md-6">
+        <?= date_field('edate', [
+          'label' => 'igb_field_award_edate',
+          'value' => $publication['edate'],
+          'required' => TRUE
+        ]); ?>
+      </div>
+    </div>
   </div>
 
   <div class="col-md-3">
     <people-editor
-      label="<?= ucfirst(lang('igb_field_rev_people')) ?>"
+      label="<?= ucfirst(lang('igb_field_award_people')) ?>"
       name="people"
       value="<?= html_escape($people) ?>"
     ></people-editor>

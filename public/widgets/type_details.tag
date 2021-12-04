@@ -50,9 +50,10 @@
         '09.15': 'News articles, that are written by the Institute and publicly available such as short news items and background reports, but no press releases.',
         '09.16': 'Newsletters officially composed and distributed by the Institute, no newsletter contributions for external formats.',
         '10.01': 'Review activities for EU projects.',
-        '10.02': 'Verbal or non-formally written advisory services for stakeholders from politics, business, administration, associations, (civil society), i.e. in meetings with members of the Bundestag or federal parliaments, ministers, officials/officers in ministries, but no meetings with non-professionals, citizens or private individuals.',
+        '10.02': 'Verbal or non-formally written advisory services for stakeholders from politics, business, administration, associations, (civil society), i.e. in meetings with members of the Bundestag or state parliaments, ministers, officials/officers in ministries, but no meetings with non-professionals, citizens or private individuals.',
         '10.03': 'Formally written self-intiated advisory services. These are addressed, for example, to the political sphere (e.g. members of parliament), the administrative sector at EU, federal, Länder or municipal level, or stakeholders from civil society (NGOs). Not to be included are peer reviews of publications and expert opinions on externally funded projects as well as expert opinions on final theses/qualifications (including doctorates). Publications of the official IGB Outlines series (e.g. IGB Policy Brief) are being documented separately by IGB Library.',
         '10.04': 'Formally written commissioned advisory services. These are addressed, for example, to the political sphere (e.g. members of parliament), the administrative sector at EU, federal, Länder or municipal level, or stakeholders from civil society (NGOs). Not to be included are peer reviews of publications and expert opinions on externally funded projects as well as expert opinions on final theses/qualifications (including doctorates).',
+        '10.05': 'Involvement in procedures of recognized organizations for national, European and international standardization.',
         '11.01': 'Award or prize for special achievement in research, transfer or communication.'
       }[tag.type];
     }

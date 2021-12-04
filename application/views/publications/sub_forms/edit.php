@@ -36,12 +36,19 @@
       'required' => TRUE
     ]); ?>
 
-    <?= text_field('notes', [
-      'label' => 'igb_field_edit_notes',
-      'help' => 'igb_help_edit_notes',
-      'value' => $publication['notes'],
-      'required' => TRUE
-    ]); ?>
+    <if-type tow="06.01">
+      <?= text_field('notes', [
+        'label' => 'igb_field_edit_journal',
+        'value' => $publication['notes'],
+      ]); ?>
+    </if-type>
+
+    <if-type except="06.01">
+      <?= text_field('notes', [
+        'label' => 'igb_field_edit_notes',
+        'value' => $publication['notes'],
+      ]); ?>
+    </if-type>
     
   </div>
   <div class="col-md-3">
@@ -55,7 +62,8 @@
     <?php if (has_role(['admin', 'library'])): ?>
       <?= text_area('authors', [
         'label' => 'igb_legacy_people',
-        'value' => $publication['authors']
+        'value' => $publication['authors'],
+        'disabled' => TRUE
       ]); ?>
     <?php else: ?>
       <?php if (isset($publication['authors']) && $publication['authors'] != ''): ?>

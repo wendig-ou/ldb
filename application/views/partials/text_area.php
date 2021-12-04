@@ -15,5 +15,6 @@
     <?php if ($help): ?>
       placeholder="<?= ucfirst($help) ?>"
     <?php endif; ?>
+    <?= $disabled ? 'disabled="true"' : '' ?>
   ><?= set_value($name, $value) ?></textarea>
 </div>

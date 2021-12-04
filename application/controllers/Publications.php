@@ -190,7 +190,17 @@
         'num_reviews_eu' => $this->input->post('num_reviews_eu'),
         'green_open_access' => $this->input->post('green_open_access'),
         'link' => $this->input->post('link'),
-        'embargo_date' => $this->input->post('embargo_date')
+        'embargo_date' => $this->input->post('embargo_date'),
+        'participation_category' => $this->input->post('participation_category'),
+        'target_group' => $this->input->post('target_group'),
+        'duration' => $this->input->post('duration'),
+        'contribution_category' => $this->input->post('contribution_category'),
+        'event_category' => $this->input->post('event_category'),
+        'language' => $this->input->post('language'),
+        'publication_category' => $this->input->post('publication_category'),
+        'dotation' => $this->input->post('dotation'),
+        'abstract' => $this->input->post('abstract'),
+        'weburl1' => $this->input->post('weburl1'),
       );
 
 
