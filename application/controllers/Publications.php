@@ -50,7 +50,8 @@
         'ct' => $this->input->get('ct'),
         'dpmt' => $this->input->get('dpmt'),
         'pname_id' => $this->input->get('pname_id'),
-        'periodical' => $this->input->get('periodical')
+        'periodical' => $this->input->get('periodical'),
+        'current_user' => $this->current_user()
       ];
       $this->data[$this->resources] = $this->model->get_all($page, $per_page, $this->data['criteria']);
       $this->data['total'] = $this->model->count($this->data['criteria']);
@@ -494,6 +495,10 @@
         return TRUE;
       } else {
         if ($super_type['code'] == 'pub') {
+          if ($type['tow'] == '01.15') {
+            return TRUE;
+          }
+
           return FALSE;
         }
       }

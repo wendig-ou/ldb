@@ -116,6 +116,16 @@
           ->like('comment', $options['creator']);
       }
 
+      if (isset($options['current_user']) && $options['current_user']) {
+        $role = $options['current_user']['role'];
+        $admin = in_array($role, ['admin', 'library']);
+        if (!$admin) {
+          $query = $query
+            ->join('ToW tow', 'publications.klr_tow = tow.tow')
+            ->where("(tow.super_type_id != 1 OR tow.tow LIKE '01.15')");
+        }
+      }
+
       // error_log(print_r($options, TRUE));
       // error_log($query->get_compiled_select(NULL, FALSE));
 

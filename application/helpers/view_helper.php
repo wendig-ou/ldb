@@ -330,7 +330,7 @@
     {
       $results = [];
       foreach ($criteria as $key => $value) {
-        if ($value) {
+        if ($key != 'current_user' && $value) {
           array_push($results, $value);
         }
       }
