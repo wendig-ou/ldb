@@ -59,7 +59,7 @@
       $this->data['supervisors'] = $this->authors_model->for_publications($this->data[$this->resources], 'b');
       $this->data['creators'] = $this->users_model->for_publications($this->data[$this->resources]);
       $this->data['types'] = $this->types_model->for_publications($this->data[$this->resources]);
-      $this->data['all_types'] = $this->types_model->get_all_in_use();
+      $this->data['all_types'] = $this->types_model->get_all(1, 9999);
       $this->data['institutions'] = $this->institutions_model->for_publications($this->data[$this->resources]);
       // error_log(print_r($this->data['types'], TRUE));
 

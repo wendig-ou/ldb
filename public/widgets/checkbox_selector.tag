@@ -1,20 +1,23 @@
-<departments-selector>
-
+<checkbox-selector>
   <div class="form-group">
-    <input type="hidden" name="dpmt" value={serialize()} />
+    <input type="hidden" name={opts.name} value={serialize()} />
 
     <label form-label>{t(opts.label, true)}</label>
-    <span class="ldb-required">*</span>
 
-    <div class="departments">
-      <div class="checkbox" each={department in departments}>
+    <span
+      if={opts.required}
+      class="ldb-required"
+    >*</span>
+
+    <div class="options">
+      <div class="checkbox" each={choice in choices}>
         <label>
           <input
             type="checkbox"
-            value={department}
+            value={choice}
             onchange={onChange}
           />
-          {department}
+          {choice}
         </label>
       </div>
     </div>
@@ -25,15 +28,18 @@
   <script type="text/javascript">
     var tag = this;
     tag.data = [];
-    tag.departments = [];
 
     tag.on('mount', function() {
+      var o = tag.opts.choices
+      tag.choices = (typeof o == 'string' ? o.split(/,/) : o)
+
       parseOpts();
       tag.update();
 
       $(tag.root).find('input[type=checkbox]').each(function(i, e){
         e = $(e);
         if (tag.data.indexOf(e.val()) != -1) {
+          console.log(e[0])
           e.prop('checked', true);
         }
       });
@@ -59,17 +65,11 @@
     }
 
     parseOpts = function() {
-      tag.departments = tag.opts.departments.split(/,/);
-      if (tag.opts.value == '') {
+      if (!tag.opts.value) {
         tag.data = [];
       } else {
         tag.data = tag.opts.value.split(/,/);
       }
     }
-
-    // tag.checked = function(value) {
-    //   return tag.data.indexOf(value) != -1;
-    // }
-
   </script>
-</departments-selector>
+</checkbox-selector>

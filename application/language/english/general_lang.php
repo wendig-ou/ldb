@@ -119,13 +119,13 @@
   $lang['igb_field_pres_title'] = 'title of presentation or talk';
   $lang['igb_help_pres_title'] = "e. g. Where have Europe's free flowing rivers gone? Restoring towards better connectivity";
   $lang['igb_field_pres_people'] = 'presenters';
-  $lang['igb_field_pres_notes'] = 'name of conference or workshop, optional: organizer or association';
+  $lang['igb_field_pres_notes'] = 'name of event or workshop, optional: organizer or association';
   $lang['igb_help_pres_notes'] = 'e. g. Great Rivers Research Symposium, (optional: International Association of Limnology)';
-  $lang['igb_field_pres_place'] = 'place of conference or workshop (city, country)';
+  $lang['igb_field_pres_place'] = 'place of event or workshop (city, country)';
   $lang['igb_help_pres_place'] = 'e. g. Brisbane, Australia';
-  $lang['igb_field_pres_edate'] = 'start date of conference';
+  $lang['igb_field_pres_edate'] = 'start date of event';
   $lang['igb_help_pres_edate'] = 'for one-day event only start date required';
-  $lang['igb_field_pres_end_date'] = 'end date of conference';
+  $lang['igb_field_pres_end_date'] = 'end date of event';
 
   $lang['igb_field_conf_fdate'] = 'year of performance';
   $lang['igb_field_conf_title'] = 'name of conference or workshop, optional: organizer or association';
@@ -333,6 +333,7 @@
   // $lang['igb_field_pres_authors'] = '';
   // $lang['igb_field_pres_fdate'] = '';
   $lang['igb_field_pres_notes'] = 'event (title)';
+  $lang['igb_field_pres_notes_03_01'] = 'scientific event (title)';
   $lang['igb_field_pres_event'] = 'event';
   // $lang['igb_field_pres_keywords'] = '';
   // $lang['igb_field_pres_reprint'] = '';

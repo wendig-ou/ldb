@@ -35,6 +35,7 @@
     <script type="riot/tag" data-src="/widgets/panel_clicker.tag"></script>
     <script type="riot/tag" data-src="/widgets/file_select_feedback.tag"></script>
     <script type="riot/tag" data-src="/widgets/type_details.tag"></script>
+    <script type="riot/tag" data-src="/widgets/checkbox_selector.tag"></script>
 
     <script type="text/javascript">
       var translations = <?= json_encode($translations) ?>;
