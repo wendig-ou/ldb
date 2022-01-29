@@ -35,10 +35,12 @@
       'value' => $publication['notes']
     ]); ?>
 
-    <?= text_field('contribution_category', [
-      'label' => 'igb_field_award_contribution_category',
-      'value' => $publication['contribution_category']
-    ]); ?>
+    <checkbox-selector
+      name="contribution_category"
+      label="igb_field_award_contribution_category"
+      choices="research,teaching,communication,transfer"
+      value="<?= set_value('contribution_category', $publication['contribution_category']) ?>"
+    ></checkbox-selector>
 
     <?= text_field('dotation', [
       'label' => 'igb_field_award_dotation',

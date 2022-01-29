@@ -202,6 +202,7 @@
         'dotation' => $this->input->post('dotation'),
         'abstract' => $this->input->post('abstract'),
         'weburl1' => $this->input->post('weburl1'),
+        'event_purpose' => $this->input->post('event_purpose')
       );
 
 
@@ -350,6 +351,17 @@
             'label' => 'lang:igb_field_'.$code.'_title',
             'rules' => 'required'
           ]);
+
+          error_log(print_r($this->data, TRUE));
+          if (isset($this->data['publication']['klr_tow'])) {
+            if ($this->data['publication']['klr_tow'] == '09.05') {
+              array_push($rules, [
+                'field' => 'notes',
+                'label' => 'lang:igb_field_'.$code.'_notes',
+                'rules' => 'required'
+              ]);
+            }
+          }
         }
 
         if ($code == 'comm') {

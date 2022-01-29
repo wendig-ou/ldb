@@ -139,6 +139,7 @@
   $lang['igb_field_conf_impactf'] = 'number of participants';
   $lang['igb_help_conf_impactf'] = 'if known, otherwise please make guess';
   $lang['igb_field_conf_notes'] = 'optional: additional information about event';
+  $lang['igb_help_conf_target_group'] = 'e. g. scientific community, NGOs, administration, politics, general public';
 
   $lang['igb_field_lec_fdate'] = 'year of performance';
   $lang['igb_field_lec_title'] = 'title of lecture or course';
@@ -200,6 +201,7 @@
   $lang['igb_help_media_notes'] = 'name of medium or venue';
   $lang['igb_field_media_edate'] = 'date';
   $lang['igb_field_media_mediatype'] = 'type of medium';
+  $lang['igb_field_media_mediatype_0913'] = 'type of publication';
   $lang['igb_help_media_mediatype'] = 'print, radio, TV, www';
 
   $lang['igb_field_edit_title'] = 'Function';
@@ -358,6 +360,7 @@
   // $lang['igb_field_pres_seditors'] = '';
   $lang['igb_field_pres_abstract'] = 'description/abstract';
   // $lang['igb_field_pres_issn_isbn'] = '';
+  $lang['igb_field_pres_impactf'] = 'number of participants';
   $lang['igb_field_pres_impactf'] = 'number of participants';
   // $lang['igb_field_pres_edate'] = '';
   // $lang['igb_field_pres_nameofmedium'] = '';
@@ -536,7 +539,7 @@
   $lang['igb_field_conf_title'] = 'title of contribution';
   // $lang['igb_field_conf_authors'] = '';
   // $lang['igb_field_conf_fdate'] = '';
-  $lang['igb_field_conf_notes'] = 'Event (title)';
+  $lang['igb_field_conf_notes'] = 'Main event (title)';
   // $lang['igb_field_conf_keywords'] = '';
   // $lang['igb_field_conf_reprint'] = '';
   // $lang['igb_field_conf_spage'] = '';
@@ -560,6 +563,7 @@
   // $lang['igb_field_conf_seditors'] = '';
   $lang['igb_field_conf_abstract'] = 'description/abstract';
   // $lang['igb_field_conf_issn_isbn'] = '';
+  $lang['igb_field_conf_event_purpose'] = 'purpose of event';
   $lang['igb_field_conf_impactf'] = 'number of participants';
   // $lang['igb_field_conf_edate'] = '';
   // $lang['igb_field_conf_nameofmedium'] = '';
@@ -655,7 +659,7 @@
   // $lang['igb_field_award_participation_category'] = '';
   // $lang['igb_field_award_target_group'] = '';
   // $lang['igb_field_award_duration'] = '';
-  $lang['igb_field_award_contribution_category'] = 'category of price/award';
+  $lang['igb_field_award_contribution_category'] = 'award category';
   // $lang['igb_field_award_event_category'] = '';
   // $lang['igb_field_award_language'] = '';
   // $lang['igb_field_award_publication_category'] = '';

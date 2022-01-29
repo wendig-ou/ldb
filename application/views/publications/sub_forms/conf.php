@@ -41,10 +41,21 @@
       'value' => $publication['abstract']
     ]); ?>
 
+    <if-type tow="07.03, 07.04">
+      <checkbox-selector
+        name="event_purpose"
+        label="igb_field_conf_event_purpose"
+        choices="information,co-design,co-production,co-publication"
+        value="<?= set_value('event_purpose', $publication['event_purpose']) ?>"
+      ></checkbox-selector>
+    </if-type>
+
     <if-type except="07.01">
       <?= text_field('impactf', [
         'label' => 'igb_field_conf_impactf',
-        'value' => $publication['impactf']
+        'help' => 'igb_help_conf_impactf',
+        'value' => $publication['impactf'],
+        'type' => 'number'
       ]); ?>
     </if-type>
 
@@ -57,7 +68,8 @@
 
     <?= text_field('target_group', [
       'label' => 'igb_field_conf_target_group',
-      'value' => $publication['target_group']
+      'value' => $publication['target_group'],
+      'help' => 'igb_help_conf_target_group',
     ]); ?>
 
     <?= text_field('duration', [
@@ -82,20 +94,6 @@
         ]); ?>
       </div>
     </div>
-
-    <?= text_field('impactf', [
-      'label' => 'igb_field_conf_impactf',
-      'help' => 'igb_help_conf_impactf',
-      'value' => $publication['impactf'],
-      'type' => 'number'
-    ]); ?>
-
-    <?= text_field('notes', [
-      'label' => 'igb_field_conf_notes',
-      'help' => 'igb_help_conf_notes',
-      'value' => $publication['notes']
-    ]); ?>
-
   </div>
   <div class="col-md-3">
 

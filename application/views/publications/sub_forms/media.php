@@ -44,7 +44,8 @@
       <?= text_field('notes', [
         'label' => 'igb_field_media_notes',
         'help' => 'igb_help_media_notes',
-        'value' => $publication['notes']
+        'value' => $publication['notes'],
+        'required' => TRUE
       ]); ?>
     </if-type>
 
@@ -62,7 +63,7 @@
       ]); ?>
     </if-type>
 
-    <if-type except="09.14, 09.15, 09.16">
+    <if-type except="09.09, 09.10, 09.11, 09.12, 09.13, 09.14, 09.15, 09.16">
       <?= text_area('mediatype', [
         'label' => 'igb_field_media_mediatype',
         'help' => 'igb_help_media_mediatype',
@@ -70,16 +71,27 @@
       ]); ?>
     </if-type>
 
+    <if-type tow="09.13">
+      <checkbox-selector
+        name="mediatype"
+        label="igb_field_media_mediatype_0913"
+        choices="annual,brochure, booklet or flyer,book,conference proceeding,website or information portal"
+        value="<?= set_value('mediatype', $publication['mediatype']) ?>"
+      ></checkbox-selector>
+    </if-type>
+
     <?= text_field('weburl1', [
       'label' => 'igb_field_media_weburl1',
       'value' => $publication['weburl1']
     ]); ?>
 
-    <if-type except="09.10, 09.11, 09.12">
-      <?= text_field('contribution_category', [
-        'label' => 'igb_field_media_contribution_category',
-        'value' => $publication['contribution_category']
-      ]); ?>
+    <if-type except="09.05, 09.09">
+      <checkbox-selector
+        name="contribution_category"
+        label="igb_field_media_contribution_category"
+        choices="lead author,contributing author"
+        value="<?= set_value('contribution_category', $publication['contribution_category']) ?>"
+      ></checkbox-selector>
     </if-type>
 
     <?= text_field('language', [
