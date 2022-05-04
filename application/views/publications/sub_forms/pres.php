@@ -91,11 +91,29 @@
       'required' => TRUE
     ]); ?>
 
-    <if-type except="03.06, 03.07">
+    <if-type except="03.01, 03.04, 03.06, 03.07">
       <?= text_field('participation_category', [
         'label' => 'igb_field_pres_participation_category',
         'value' => $publication['participation_category']
       ]); ?>
+    </if-type>
+
+    <if-type tow="03.01">
+      <checkbox-selector
+        name="participation_category"
+        label="igb_field_pres_participation_category"
+        choices="keynote,plenary talk,moderation,podium discussion,other"
+        value="<?= set_value('participation_category', $publication['participation_category']) ?>"
+      ></checkbox-selector>
+    </if-type>
+
+    <if-type tow="03.04">
+      <checkbox-selector
+        name="participation_category"
+        label="igb_field_pres_participation_category"
+        choices="lecture,moderation,discussion,other"
+        value="<?= set_value('participation_category', $publication['participation_category']) ?>"
+      ></checkbox-selector>
     </if-type>
 
     <if-type except="03.06">

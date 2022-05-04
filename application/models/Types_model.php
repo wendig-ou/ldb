@@ -14,6 +14,16 @@
       return $this->db->where('active = 1');
     }
 
+    public function get_active()
+    {
+      $query = $this->db
+        ->where('active = 1')
+        ->get($this->table_name);
+
+      $results = $query->result_array();
+      return array_map([$this, 'modify'], $results);
+    }
+
     public function get_all_in_use() {
       $query = $this->db()
         ->reset_query()

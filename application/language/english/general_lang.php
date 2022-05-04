@@ -201,7 +201,7 @@
   $lang['igb_help_media_notes'] = 'name of medium or venue';
   $lang['igb_field_media_edate'] = 'date';
   $lang['igb_field_media_mediatype'] = 'type of medium';
-  $lang['igb_field_media_mediatype_0913'] = 'type of publication';
+  $lang['igb_field_media_mediatype_0913'] = 'category of publication';
   $lang['igb_help_media_mediatype'] = 'print, radio, TV, www';
 
   $lang['igb_field_edit_title'] = 'Function';

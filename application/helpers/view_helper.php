@@ -230,7 +230,8 @@
         'super_type_id' => FALSE,
         'autofocus' => FALSE,
         'required' => TRUE,
-        'variant' => 'select'
+        'variant' => 'select',
+        'only_active' => FALSE
       ];
       $options = array_merge($defaults, $options);
 

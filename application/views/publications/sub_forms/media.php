@@ -75,7 +75,7 @@
       <checkbox-selector
         name="mediatype"
         label="igb_field_media_mediatype_0913"
-        choices="annual,brochure, booklet or flyer,book,conference proceeding,website or information portal"
+        choices="annual,brochure or booklet or flyer,book,conference proceeding,website or information portal,other"
         value="<?= set_value('mediatype', $publication['mediatype']) ?>"
       ></checkbox-selector>
     </if-type>
