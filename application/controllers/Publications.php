@@ -456,11 +456,6 @@
       }
     }
 
-    public function can_create()
-    {
-      return TRUE;
-    }
-
     public function can_verify($user, $publication)
     {
       return $this->has_role(['admin', 'library', 'proofreader']);
@@ -489,6 +484,36 @@
           return !$this->data[$this->resource]['ct'];
         }
       }
+      return TRUE;
+    }
+
+    public function can_create()
+    {
+      $super_type_id = $this->input->get('super-type-id');
+      $klr_tow = $this->input->post('klr_tow');
+      $super_type = $this->super_types_model->get($super_type_id);
+      $type = $this->types_model->get_ignore_scope($klr_tow);
+
+      if (!$super_type) {
+        return TRUE;
+      }
+
+      if (!$type) {
+        return TRUE;
+      }
+
+      if ($super_type['code'] == 'pub') {
+        if ($this->has_role(['admin', 'library'])) {
+          return TRUE;
+        } else {
+          if ($type['tow'] == '01.15') {
+            return TRUE;
+          }
+
+          return FALSE;
+        }
+      }
+
       return TRUE;
     }
 
