@@ -17,7 +17,8 @@
     }
 
     var notify = function() {
-      window.igb.bus.trigger('type-selected', value())
+      window.igb.setType(value())
+      // window.igb.bus.trigger('type-selected', value())
     }
   </script>
 </type-notifier>

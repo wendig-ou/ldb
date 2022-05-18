@@ -6,7 +6,6 @@
 
   <script type="text/javascript">
     var tag = this;
-    window.t = tag;
 
     tag.on('mount', function() {
       $(tag.root).parent().on('change', ':file', function() {

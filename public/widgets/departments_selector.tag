@@ -24,13 +24,14 @@
 
   <script type="text/javascript">
     var tag = this;
-    tag.data = [];
-    tag.departments = [];
+
+    tag.on('before-mount', function() {
+      tag.data = [];
+      tag.departments = [];
+      parseOpts();
+    })
 
     tag.on('mount', function() {
-      parseOpts();
-      tag.update();
-
       $(tag.root).find('input[type=checkbox]').each(function(i, e){
         e = $(e);
         if (tag.data.indexOf(e.val()) != -1) {
@@ -66,10 +67,5 @@
         tag.data = tag.opts.value.split(/,/);
       }
     }
-
-    // tag.checked = function(value) {
-    //   return tag.data.indexOf(value) != -1;
-    // }
-
   </script>
 </departments-selector>

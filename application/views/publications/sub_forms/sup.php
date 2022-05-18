@@ -80,21 +80,6 @@
       ></people-editor>
     </if-type>
 
-    <?php if (has_role(['admin', 'library'])): ?>
-      <?= text_area('authors', [
-        'label' => 'igb_legacy_people',
-        'value' => $publication['authors'],
-        'disabled' => TRUE
-      ]); ?>
-    <?php else: ?>
-      <?php if (isset($publication['authors']) && $publication['authors'] != ''): ?>
-        <div class="text-muted">
-          <strong><?= lang('igb_legacy_people') ?>:</strong>
-          <?= author_list($publication['authors']) ?>
-        </div>
-      <?php endif; ?>
-    <?php endif ?>
-
     <?= text_field('editors', [
       'label' => 'igb_involved_people',
       'value' => $publication['editors'],

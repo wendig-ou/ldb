@@ -17,7 +17,6 @@
 
   <script type="text/javascript">
     var tag = this;
-    window.t = tag;
 
     tag.on('mount', function() {
       var v = tag.opts.value

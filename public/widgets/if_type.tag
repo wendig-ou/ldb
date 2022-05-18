@@ -38,6 +38,11 @@
       //   (categories[igb.currentType] == tag.opts.category) &&
       //   (!tag.opts.except || !tag.opts.except.match(igb.currentType))
       // );
+      if (tag.opts.x == '12') {
+        console.log('UPDATING', tag.opts)
+        window.t = tag
+      }
+
       if (tag.opts.category) {
         return (
           (categories[igb.currentType] == tag.opts.category) &&
@@ -76,6 +81,11 @@
       }
 
       tag.update();
+
+      // TODO: why is this necessary?
+      window.setTimeout(function() {
+        riot.update();
+      }, 0)
     }
 
 

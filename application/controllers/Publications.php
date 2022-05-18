@@ -202,6 +202,7 @@
         'dotation' => $this->input->post('dotation'),
         'abstract' => $this->input->post('abstract'),
         'weburl1' => $this->input->post('weburl1'),
+        'weburl2' => $this->input->post('weburl2'),
         'event_purpose' => $this->input->post('event_purpose')
       );
 
@@ -457,12 +458,6 @@
 
     public function can_create()
     {
-      if (!$this->has_role(['admin', 'library'])) {
-        if ($this->data['super_type_id']) {
-          return $this->data['super_type']['code'] != 'pub';
-        }
-      }
-
       return TRUE;
     }
 

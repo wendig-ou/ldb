@@ -39,7 +39,6 @@
       $(tag.root).find('input[type=checkbox]').each(function(i, e){
         e = $(e);
         if (tag.data.indexOf(e.val()) != -1) {
-          console.log(e[0])
           e.prop('checked', true);
         }
       });

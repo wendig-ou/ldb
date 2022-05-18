@@ -10,9 +10,6 @@
     >
       <a
         href="?super-type-id=<?= $super_type['id'] ?>"
-        <?php if ($super_type['code'] == 'pub'): ?>
-          <?= has_role(['admin', 'library']) ? '' : 'disabled="true"' ?>
-        <?php endif ?>
       >
         <div class="panel panel-default igb-grid-panel">
           <div class="panel-body">

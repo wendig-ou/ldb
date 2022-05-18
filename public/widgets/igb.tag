@@ -5,18 +5,20 @@
     tag.on('mount', function() {
       window.igb = {
         bus: riot.observable(),
-        currentType: null
+        currentType: null,
+        setType: setType
       }
 
-      igb.bus.on('type-selected', setType);
+      // igb.bus.on('type-selected', setType);
     })
 
-    tag.on('unmount', function(event) {
-      igb.bus.off('type-selected', setType);
-    })
+    // tag.on('unmount', function(event) {
+    //   igb.bus.off('type-selected', setType);
+    // })
 
     var setType = function(type) {
-      igb['currentType'] = type;
+      window.igb['currentType'] = type;
+      window.igb.bus.trigger('type-selected')
     }
   </script>
 </igb>

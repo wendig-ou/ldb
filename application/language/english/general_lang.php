@@ -163,6 +163,20 @@
   $lang['igb_help_comm_notes'] = 'e. g. Gesellschaft zur Rettung des Störs e.V.';
   $lang['igb_field_comm_eu_comm'] = 'part of EU commission or committee advisory or expert group';
 
+  // for software
+  $lang['igb_field_pub_title_0116'] = 'software (name)';
+  $lang['igb_field_pub_fdate_0116'] = 'year of (first) publication';
+  $lang['igb_field_pub_notes_0116'] = 'license';
+  $lang['igb_field_pub_periodical_name_0116'] = 'repository (name)';
+  $lang['igb_field_pub_weburl1_0116'] = 'repository (URL)';
+  $lang['igb_field_pub_weburl2_0116'] = 'website (documentation, supplements etc.) (URL)';
+  $lang['igb_field_pub_open_access_0116'] = 'Open Software';
+  $lang['igb_field_pub_people_0116'] = 'authors';
+  $lang['igb_field_pub_participation_category_0116'] = 'type of software';
+  $lang['igb_field_pub_target_group_0116'] = 'target group';
+  $lang['igb_field_pub_editors_0116'] = 'involved persons';
+  $lang['igb_field_pub_abstract_0116'] = 'description/abstract';
+  //
   $lang['igb_field_pub_fdate'] = 'year of publication';
   $lang['igb_field_pub_people'] = 'authors';
   $lang['igb_field_pub_title'] = 'title';
